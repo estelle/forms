@@ -177,7 +177,7 @@ li.highlight { color: black;}
   color: rgba(181, 0, 98, 0.6);
 }
 */
-.slide section a {color: rgb(226, 0, 122);}
+.slide h2 a {color: rgb(226, 0, 122);}
 .slide section a:focus,
 .slide section a:active, 
 .slide section a:hover { color: rgba(226, 0, 122, 0.6); text-shadow: 2px 2px 2px rgba(0,0,0,0.2);}
@@ -317,11 +317,9 @@ body {
   font-size: 30px;
 }
 
-.grow .column{
- font-size: 36px;	
-}
+
 .content input, button {
-  font-size: 30px;
+  //font-size: 30px;
 }
 
 .content td {
@@ -697,3 +695,37 @@ html, body {
 			height: 74px;
 			display:block;	
 		}
+		h1, .slide a {color: #609;}
+/* OBJECT PAGES */
+.object header {
+	position:absolute; 
+	top: 10px; 
+	width: 100%; 
+	text-align:center; 
+	background-color: rgba(255,255,255,0.9); 
+	left:0;
+}
+.objectlink {
+	position:absolute;
+	top:0; right:0;
+	border-radius: 0 10px 0 0;
+	color: white; 
+	background: #000; 
+	padding: 3px 5px; 
+	border: none;
+}
+header .objectlink {top:-10px;}
+.slide.object {
+	padding:0;
+}
+object {
+	border-radius: 12px;
+	}
+.object object {width: 100%; height: 100%;}
+[contenteditable]:focus {box-shadow:none; outline:1px dashed white;}
+.icons .txt {
+background-image: none;
+width: auto;
+font-size: 18px;
+}
+input:not([type=search]){ font-size: 24px;}
