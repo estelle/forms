@@ -303,7 +303,7 @@
 	addNotes: function(){
 		var ta = document.createElement('textarea');
 		var currentSlide = document.querySelector('.current section');
-		var key = 'snow' +  window.location.hash;
+		var key = 'forms' +  window.location.hash;
 		ta.value = window.localStorage.getItem(key) || '';
 		
 		ta.addEventListener('keyup', function(){
