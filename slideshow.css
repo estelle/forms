@@ -318,9 +318,7 @@ body {
 }
 
 
-.content input, button {
-  //font-size: 30px;
-}
+
 
 .content td {
 }
@@ -456,7 +454,7 @@ pre {
   text-align: left;
   font-size: 80%;
   padding: 10px 20px;
-  background: rgba(255, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.05);
   -webkit-border-radius: 8px;
   -khtml-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -636,10 +634,10 @@ html, body {
 			rgba(255, 255, 255, 0) 100%) 15px 15px / 30px 30px repeat #609;
 	}
 	#info {color: #fff; text-align:center;}
-		.required input[required] {border: 1px dashed #f00;}
+		.required input[required][type= {border: 1px dashed #f00;}
 		.classed:focus:invalid { background-color: lightPink; }
 		.classed:valid:not([type=search]) { background-color:lightGreen }
-		.classed:required {border: 2px solid red;}
+		.classed:required {border: 2px dotted red;}
 		.classed:optional:not([type=search]) {border: 2px solid green;}
 		.why {background-color: #ffffff;}
 		.why img {float: left; margin: 0 15px 30px;}
@@ -729,3 +727,5 @@ width: auto;
 font-size: 18px;
 }
 input:not([type=search]){ font-size: 24px;}
+.labeled label {display: inline-block; width: 400px;}
+.labeled input {border: 1px solid #ccc;}
