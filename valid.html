@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 Sample Validation Page</title>
+<style type="text/css">
+
+/* the containing box */
+::-webkit-validation-bubble {
+	background-color: red;
+	padding: 10px;
+	}
+/* top of box, behind arrow */
+::-webkit-validation-bubble-arrow-clipper  { 
+	background-color:lime;
+	padding: 10px;
+}
+
+/* the whole bubble, not including the arrow */
+::-webkit-validation-bubble-message {
+    color: #eee;
+	-webkit-appearance: none;
+    background: orange;
+    border-color: blue;
+    -webkit-box-shadow: 4px 4px 4px rgba(100,100,100,0.5);
+	padding: 10px;
+}
+
+::-webkit-validation-bubble-message:before {
+  content: "";
+	background: purple;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+	padding: 10px;
+ }
+
+/*the arrow */
+::-webkit-validation-bubble-arrow {
+	
+	background: none;
+    background: magenta;
+    border-color: #444;
+    -webkit-box-shadow: 0 0 0 0;
+	padding: 10px;
+}
+
+
+</style>
+</head>
+<body>
+<form id="form1" method="get">
+<label>Age: <input id="b" type="number" name="age"  min="18" max="60" step="1" required> (between 18 and 60)</label>
+
+<script>
+
+function validate() {
+	var input = document.getElementById('b');
+	var validityState_object = input.validity;
+	if(validityState_object.valueMissing) {
+		input.setCustomValidity('Please set an age (required)');	
+	} else if (input.rangeUnderflow) {
+        input.setCustomValidity('Your value is too low');
+    } else if (input.rangeOverflow) {
+        input.setCustomValidity('Your value is too high');
+    } else {
+		//if valid, must reset because customError will be true
+        input.setCustomValidity('');
+    }
+}
+</script>
+<input type="submit" value="send"  onclick="validate()"/>
+</form>
+</body>
+</html>
+
