@@ -228,6 +228,9 @@
         function(e) { _t.handleTouchEnd(e); }, false);
     window.addEventListener('popstate',
         function(e) { _t.go(e.state); }, false);
+	
+  doc.getElementById('back').addEventListener('click', function(e) {_t.prev();}, false);
+  doc.getElementById('next').addEventListener('click', function(e) {_t.next();}, false);
     this._update();
   };
 
@@ -354,6 +357,4 @@
   // Initialize
   var slideshow = new SlideShow(query('.slide'));
   
-  doc.getElementById('back').addEventListener('click', function(e) {Slide.prev();}, false);
-  doc.getElementById('next').addEventListener('click', function(e) {Slide.next();}, false);
 })();
