@@ -301,10 +301,15 @@
     },
 	
 	addNotes: function(){
+		if(document.querySelector('.current textarea.mynotes')) {
+			document.querySelector('.current textarea.mynotes').classList.toggle('temphidden');
+			return;
+		}
 		var ta = document.createElement('textarea');
 		var currentSlide = document.querySelector('.current section');
 		var key = 'forms' +  window.location.hash;
 		ta.value = window.localStorage.getItem(key) || '';
+		ta.className = 'mynotes';
 		
 		ta.addEventListener('keyup', function(){
 			//console.log(key + ' ' + ta.value)
