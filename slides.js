@@ -354,6 +354,6 @@
   // Initialize
   var slideshow = new SlideShow(query('.slide'));
   
-  doc.getElementById('back').addEventListener('click', function(e) {this.prev();}, false);
-  doc.getElementById('next').addEventListener('click', function(e) {this.next();}, false);
+  doc.getElementById('back').addEventListener('click', function(e) {Slide.prev();}, false);
+  doc.getElementById('next').addEventListener('click', function(e) {Slide.next();}, false);
 })();
