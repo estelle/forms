@@ -634,7 +634,7 @@ html, body {
 			rgba(255, 255, 255, 0) 100%) 15px 15px / 30px 30px repeat #609;
 	}
 	#info {color: #fff; text-align:center;}
-		.required input[required][type= {border: 1px dashed #f00;}
+		.required input[required]:not([type=checkbox]):not([type=search]) {border: 1px dashed #f00;}
 		.classed:focus:invalid { background-color: lightPink; }
 		.classed:valid:not([type=search]) { background-color:lightGreen }
 		.classed:required {border: 2px dotted red;}
