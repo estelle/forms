@@ -39,9 +39,9 @@
 <div class="slide intro">
 <header>
 <hgroup>
-<h1><br>HTML5 Web Forms</h1>
-<h2>HTML form elements<br>
-and attributes</h2>
+<h1><br>Web Forms 2.0</h1>
+<h2>New form elements &amp; <br>
+Attributes in HTML5</h2>
 </hgroup>
 </header>
 <p style="text-align:center"><a href="http://estelle.github.com/forms">estelle.github.com/forms</a></p>
@@ -83,13 +83,31 @@ and attributes</h2>
    </div>
 
 
-
+<div class="slide">
+<header>
+  <h1>HTML5 Form</h1>
+</header>
+<section>
+    <form action="#" class="example">
+    <ul>
+        <li><label for="yname">Name</label><input type="text" id="yname"/></li>
+        <li><label for="yemail">Email</label><input type="email" id="yemail"/></li>
+        <li><label for="ydob">Birthday</label><input type="date" id="ydob"/></li>
+        <li><label for="yage">Age</label><input type="number" id="yage"/></li>
+        <li><label for="yphone">Phone</label><input type="tel" id="yphone"/></li>
+        <li><label for="yrange">Satisfaction</label><input type="range" id="yrange"/></li>
+        <li><label for="ytweet">Twitter Handle</label><input type="text" id="ytweet"/></li>
+        <li><input type="submit" value="submit"></li>
+     </ul>
+    </form>
+  </section>
+</div>
 
 
 
 <div class="slide">
 <header>
-  <h1>HTML5 Form</h1>
+  <h1>HTML5 Form on Steroids </h1>
 </header>
 <section>
     <form action="#" class="example">
@@ -133,9 +151,11 @@ and attributes</h2>
 </header>
 <section class="why">
     <p>
-    <img src="images/invalid_pops.gif" style="float:left"/>
-    <img src="images_why2/why_custom_look.gif" style="float:left" alt="custom error message"/>
+    <img src="images_why2/why_notvalid_email.gif"/>
+    <img src="images_why2/why_notvalid_required.gif"/>
+    <img src="images_why2/why_custom_message.gif"/>
     <img src="images_why2/why_date.gif" style="float:right"/>
+    <img src="images_why2/why_custom_look.gif" alt="custom error message"/>
     <img src="images/date_iphone.png" alt="date picker in iOS"/>
     </p>
   </section>
@@ -158,7 +178,7 @@ and attributes</h2>
         <li>submit</li>
         <li>text</li>
     </ul>
-    <footer>Was disabled on iPad, iPhone, iPod Touch thru iOS5</footer>
+    <footer>* disabled on iPad, iPhone, iPod Touch</footer>
   </section>
 </div>
 
@@ -182,7 +202,7 @@ and attributes</h2>
 	<pre contenteditable>&lt;input type="file" accept="audio/*;capture=microphone"&gt;</pre>
     </li>
 </ul>
-<small>Mobile: Android 3+, Chrome 16+, Safari 6+, Firefox 10+, Blackberry 10+</small>
+<small>Support: Android 3.0 browser, Chrome for Android (0.16), FF Mobile 10.0</small>
 </section></form>
 </div>
 
@@ -228,11 +248,6 @@ and attributes</h2>
       <li>width    </li>
       <li>checked*    </li>
       <li><del>align</del>** </li>
-      <li class="half">action</li>
-      <li class="half">method</li>
-      <li class="half">accept-charset</li>
-      <li class="half">enctype</li>
-      <li class="half">target</li>
     </ul>
     <footer><ul><li>* pseudoclasses can target with :disabled and :checked</li>
     <li>** align is deprecated. Use CSS.</li></ul></footer>
@@ -247,22 +262,24 @@ and attributes</h2>
   <section class="content">
     <ul class="column">
           <li>form</li>
+          <li>readonly    </li>
           <li>autocomplete    </li>
           <li>autofocus    </li>
           <li>list    </li>
           <li>pattern    </li>
           <li>required*    </li>
           <li>placeholder    </li>
-          <li>dirname</li>
           <li>multiple    </li>
           <li>list    </li>
           <li>min    </li>
           <li>max    </li>
           <li>step    </li>
-          <li class="half">novalidate </li>
-          <li class="half">low</li>
-          <li class="half">high</li>
-          <li class="half">optimum</li>
+          <li>dirname</li>
+          <li>formaction    </li>
+          <li>formenctype    </li>
+          <li>formmethod    </li>
+          <li>formtarget    </li>
+          <li>formnovalidate </li>
     </ul>
     <footer><ul>
     <li>* pseudoclass :required can target.</li>
@@ -280,7 +297,7 @@ and attributes</h2>
   <section class="content">
   <div style="float: left; width: 45%;">
   <p>Old Elements</p>
-  <ul class="col">
+  <ul>
         <li>&lt;form&gt;</li>
         <li>&lt;fieldset&gt;</li>
         <li>&lt;legend&gt;</li>
@@ -294,7 +311,7 @@ and attributes</h2>
   </div>
   <div style="float: left; margin-right: 100px">
   <p>New Elements</p>
-  <ul class="col">
+  <ul>
         <li>&lt;datalist&gt;</li>
         <li>&lt;output&gt;</li>
         <li>&lt;meter&gt;</li>
@@ -310,11 +327,12 @@ and attributes</h2>
         <div class="slide section">
           <header><h1>Labels</h1></header>
           <section>
-          <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
-&lt;input id=&quot;inputID&quot; name=&quot;nm&quot; type=&quot;text&quot; /&gt;</pre>
+          <pre contenteditable>
+&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt; <br />
+&lt;input id=&quot;inputID&quot; name=&quot;inputName&quot; type=&quot;text&quot; /&gt;</pre>
 <p>or</p>
 <pre contenteditable>
-&lt;label&gt;Label: &lt;input name=&quot;nm&quot; type=&quot;text&quot; /&gt;&lt;/label&gt;<br /></pre>
+&lt;label&gt;Label: &lt;input name=&quot;inputName&quot; type=&quot;text&quot; /&gt;&lt;/label&gt;<br /></pre>
             <p>The value of the <em>for</em> attribute should match the value of the input's <em>id</em> attribute</p>
             <hr/>
             <p>Click on the label to activate the form element:</p>
@@ -623,7 +641,7 @@ input:required {border: 1px dashed #f00;}</pre>
 <ul>
 <li>button <small>does nothing. use button or js</small></li>
 <li>checkbox <small>unchecked not submitted with form</small></li>
-<li>file <small>disabled in iOS5 and earlier</small></li>
+<li>file <small>disabled in iPhone/iOS</small></li>
 <li>hidden</li>
 <li>image <small>works like &lt;button&gt;</small></li>
 <li>password <small>use post, not get</small></li>
@@ -632,7 +650,7 @@ input:required {border: 1px dashed #f00;}</pre>
 <li>submit</li>
 <li>text <small>default</small></li></ul>
   <footer style="margin-top: -40px;">   <ul class="icons">
-  	   <li class="safari "> Safari</li>
+  	   <li class="safari half"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
@@ -666,7 +684,7 @@ input:required {border: 1px dashed #f00;}</pre>
   <footer>
      <ul class="icons">
   	   <li class="safari half"> Safari</li>
-       <li class="chrome">Chrome</li>
+       <li class="chrome half">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox iffy">Firefox</li>
        <li class="ie iffy new">IE10</li>
@@ -716,7 +734,7 @@ required />
        <li class="ie no">IE10</li>
        <li class="txt">Supported in BB</li>
      </ul>
-  <p>Note: defaults to #000000, lowercase.</p>
+  <p>Note: defaults to #000000</p>
   </footer>
           </section>
 
@@ -898,14 +916,16 @@ pattern="[0-9]|10"
 min="0" max="10"
 step="1" onChange="document.querySelector('#rangeit').innerHTML = (document.querySelector('#range').value);"/>  <small onClick="document.querySelector('#rangeit').innerHTML = (document.querySelector('#range').value);">Current Value: <output id="rangeit"></output></small>
 
- <pre contenteditable>&lt;input <strong><em>type="range"</em>  </strong>min="0" max="100" step="5"/&gt;
+ <pre contenteditable>&lt;input id="range" name="range"
+<strong><em>type="range"</em>  </strong>
+min="0" max="100" step="5"/&gt;
 
 input[type=range]{-webkit-appearance: slider-vertical;}</pre>
-<div style="float: left"><input id="range2" name="range"
+<input id="range2" name="range"
 type="range"
 placeholder="0 to 100"
 min="0" max="100"
-step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.querySelector('#range2').value;"/>  <small onClick="document.querySelector('#rangeit2').innerHTML = document.querySelector('#range2').value;">Current Value: <output id="rangeit2"></output></small></div>
+step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.querySelector('#range2').value;"/>  <small onClick="document.querySelector('#rangeit2').innerHTML = document.querySelector('#range2').value;">Current Value: <output id="rangeit2"></output></small>
 
         <footer>
           <ul class="icons">
@@ -913,7 +933,7 @@ step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.quer
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox no">Firefox</li>
-       <li class="ie">IE</li>
+       <li class="ie no">IE</li>
      </ul>
      </footer>
 
@@ -928,7 +948,8 @@ step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.quer
 id="search"
 name="search"
 <strong><em>type="search"</em></strong>
-placeholder="search terms"/&gt;</pre><input
+placeholder="search terms"/&gt;
+  </pre><input
   id="search" name="search" type="search"
   placeholder="search terms" />
 <ul class="icons">
@@ -938,8 +959,8 @@ placeholder="search terms"/&gt;</pre><input
   	   <li class="firefox iffy">Firefox</li>
        <li class="ie new iffy">IE10</li>
      </ul>
-<p><small>Note: Dynamic keyboards will show "search" instead of "go"</small></p>
-<p><small>Warning: if you stylize the input, the 'delete' may not show</small></p>
+
+<small>Warning: if you stylize the input, the 'delete' may not show</small>
 
           </section>
 
@@ -1169,11 +1190,11 @@ placeholder="search terms"/&gt;</pre><input
 <pre contenteditable>&lt;<b>output</b>&gt;</pre>
 </pre>
 <ul class="icons" style="margin-top:0;">
-  	   <li class="safari new"> Safari</li>
+  	   <li class="safari half"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
-  	   <li class="firefox new">Firefox</li>
-       <li class="ie half">IE</li>
+  	   <li class="firefox half">Firefox</li>
+       <li class="ie no">IE</li>
      </ul>
 </section>
 
