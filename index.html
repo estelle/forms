@@ -499,7 +499,23 @@ input:required {border: 1px dashed #f00;}</pre>
 
         </div>
 
-
+<div class="slide">
+  <header><h1>CSS UI Selectors</h1></header>
+    <section class="content">
+      <pre contenteditable>
+input:focus:required {
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+input:focus:required:invalid {
+  background-image: url(warning.jpg);
+}
+input:focus:required:valid {
+  background-image: url(checkmark.jpg);
+}
+      </pre>
+    </section>
+</div>
 
  <div class="slide section">
           <header><h1><em>autofocus</em> attribute</h1></header>
