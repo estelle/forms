@@ -181,11 +181,11 @@ li.highlight { color: black;}
 }
 */
 .slide h2 a {
-  color: rgb(98,96,62);
+  color: darkslategrey;
 }
 .slide section a:focus,
 .slide section a:active,
-.slide section a:hover { color: palegoldenrod; text-shadow: 2px 2px 2px rgba(0,0,0,0.2);}
+.slide section a:hover { color: darkgrey; text-shadow: -9px 2px 2px hsla(0, 0%, 0%, 0.2);}
 
 
 
@@ -584,32 +584,26 @@ tr {list-style-type: disc;}
 
 * {background-repeat: no-repeat;}
 body {
-	background-color: palegoldenrod;
+	background-color: white;
 	background-image:
 		-webkit-gradient(radial, 15 5, 0, 15 5, 5,
 			color-stop(0.96, rgba(0, 0, 0, 0)),
-			color-stop(0.96, rgba(0, 0, 0, 0.3)),
+			color-stop(0.96, rgba(0, 0, 0, 0.1)),
 			color-stop(1.00, rgba(0, 0, 0, 0.3))
 		),
 
 		-webkit-gradient(radial, 15 5, 0, 15 5, 5.5,
 			color-stop(0.96, rgba(0, 0, 0, 0)),
-			color-stop(0.96, rgba(0, 0, 0, 0.3)),
+			color-stop(0.96, rgba(0, 0, 0, 0.1)),
 			color-stop(1.00, rgba(0, 0, 0, 0.3))
 		);
     background-image:
-		-webkit-radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.3) 100%),
+		-webkit-radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.1) 100%),
 		-webkit-radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.3) 100%);
-	background-image:
-		-moz-radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.3) 100%),
-		-moz-radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.3) 100%);
-	background-image:
-		-ms-radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.3) 100%),
-		-ms-radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.3) 100%);
 
 
 	background-image:
-		radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.3) 100%),
+		radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.1) 100%),
 		radial-gradient(circle closest-side, transparent 96%, rgba(0, 0, 0, 0.3) 100%);
 
     background-position: 0 0pt, 15px 15px;
@@ -698,7 +692,7 @@ html, body {
 			height: 74px;
 			display:block;
 		}
-		h1, .slide a {color: #609;}
+		h1, .slide a {color: darkslateblue;}
 /* OBJECT PAGES */
 .object header {
 	position:absolute;
