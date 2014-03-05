@@ -23,7 +23,7 @@ body, ul, li {
 <body>
 <form action="" method="get">
 <p><label for="el">Custom validation message </label>
-<input id="el" type="tel" name="tel" placeholder="xxx-xxx-xxxx" title="This error message is simply the contents of the title attribute" required /></p>
+<input id="el" type="tel" name="tel" placeholder="xxx-xxx-xxxx" title="This error message is simply the contents of the title attribute" pattern="\d{3}\-\d{3}\-\d{4}" required /></p>
 <p><input type="submit" value="Test Me" />
 </form>
 </body>
