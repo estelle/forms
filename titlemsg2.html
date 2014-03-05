@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Title attribute</title>
+<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<style type="text/css">
+:root {font-size: 62.5%;}
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 2rem;
+}
+ input:invalid { background-color: lightpink; }
+ input:focus:invalid { background-color: transparent; }
+
+</style>
+</head>
+
+
+<body>
+<form action="" method="get">
+<p><label for="el">Error Message</label>
+<input id="el" type="tel" name="tel" placeholder="xxx-xxx-xxxx" title="please enter a phone number with the pattern of XXX-XXX-XXXX" pattern="\d{3}\-\d{3}\-\d{4}" required /></p>
+<p><input type="submit" value="Try Me" />
+</form>
+</body>
+</html>

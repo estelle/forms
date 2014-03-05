@@ -1114,16 +1114,34 @@ placeholder="search terms"/&gt;</pre><input
 
         </div>
 
+
+<div class="slide intro" style="background-image: url(images/sweetbrown.jpg); background-size: auto 100%">
+  <header></header>
+    <section class="content"><h1 style="color: black; text-shadow: 0 0 13px white; font-size: 3rem;  text-align: right">"Ain't nobody <br/>got time <br/>for that." <br/>-- Sweet <br/>Brown</h1><!--<img src="images/sweet.png" alt="Ain't nobody got time for that. -- sweet brown"/>-->
+    </section>
+</div>
+
+
+
          <div class="slide section">
-          <header><h1>Styling</h1></header>
+          <header><h1>Custome Error message</h1></header>
           <section class="content">
-<pre contenteditable>::-webkit-validation-bubble{}
-::-webkit-validation-bubble-arrow-clipper{}
-::-webkit-validation-bubble-arrow{}
-::-webkit-validation-bubble-message{}</pre>
-            <img src="images_why2/why_custom_look.gif"/>
-            <object data="email.html" style=" width: 300px; height:150px;border:1px #ccc solid; border-radius: 10px;"></object>
-          <object data="valid.html"  style=" width: 300px; height:150px;border:1px #ccc solid; border-radius: 10px;"></object>
+<pre contenteditable>&lt;input type="tel" name="tel"
+  placeholder="xxx-xxx-xxxx"
+  <em>title="please enter a phone number with the
+    pattern of XXX-XXX-XXXX"</em>
+  pattern="\d{3}\-\d{3}\-\d{4}"
+  required /></pre>
+            <object data="titlemsg.html" style=" width: 300px; height:200px; float: left"></object>
+         <object data="titlemsg2.html" style="width: 300px; height:200px;"></object>
+         <ul class="icons">
+               <li class="safari no"> Safari</li>
+               <li class="chrome">Chrome</li>
+               <li class="opera">Opera</li>
+               <li class="firefox">Firefox</li>
+               <li class="ie">IE</li>
+         </ul>
+         <p>validityObject.patternMismatch</p>
           </section>
 
         </div>
