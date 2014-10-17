@@ -43,7 +43,7 @@
 and attributes</h2>
 </hgroup>
 </header>
-<p style="text-align:center"><a href="http://estelle.github.com/forms">estelle.github.com/forms</a></p>
+<p style="text-align:center"><a href="http://estelle.github.io/forms">estelle.github.io/forms</a></p>
 </div>
 
 
@@ -72,7 +72,10 @@ and attributes</h2>
             <li><label for="xdob">Birthday</label><input type="text" id="xdob"/></li>
             <li><label for="xage">Age</label><input type="text" id="xage"/></li>
             <li><label for="xphone">Phone</label><input type="text" id="xphone"/></li>
-            <li><label for="xrange">Satisfaction</label><input type="text" id="xrange"/></li>
+            <li><label for="xrange">Satisfaction</label>
+              <input type="text" id="xrange"/>
+
+            </li>
             <li><label for="xtweet">Twitter Handle</label><input type="text" id="xtweet"/></li>
             <li>
             <input type="submit" value="submit"></li>
@@ -98,7 +101,14 @@ and attributes</h2>
         <li><label for="zdob">Birthday</label><input type="date"  class="classed"  required placeholder="01/01/84" id="zdob"/></li>
         <li><label for="zage">Age</label><input type="number"  class="classed"  required min="21" max="105" id="zage"/></li>
         <li><label for="zphone">Phone</label><input type="tel" class="classed"  pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX" id="zphone"/></li>
-        <li><label for="zrange">Satisfaction</label><input type="range" id="zrange" min="0" max="10" step="1"/></li>
+        <li><label for="zrange">Satisfaction</label><input type="range" id="zrange" min="0" max="10" step="1" list="zrangelist"  />
+
+          <datalist id="zrangelist">
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </datalist>
         <li><label for="ztweet">Twitter Handle</label><input type="text"  class="classed"  pattern="@\w*" placeholder="@twitter_handle" required id="ztweet"/></li>
         <li>
         <input type="submit" value="submit"></li>
@@ -192,7 +202,6 @@ and attributes</h2>
   <ul class="column">
         <li>color</li>
         <li>date </li>
-        <li>datetime </li>
         <li>datetime-local </li>
         <li>email </li>
         <li>month </li>
@@ -244,24 +253,31 @@ and attributes</h2>
 <div class="slide normal">
   <header><h1> New &lt;input&gt; attributes in HTML5</h1></header>
   <section class="content">
-    <ul class="column">
-          <li>form</li>
-          <li>autocomplete    </li>
+    <ul class="column columns">
+          <li class="half">autocomplete    </li>
+          <li class="half">spellcheck</li>
           <li>autofocus    </li>
-          <li>list    </li>
           <li>pattern    </li>
           <li>required*    </li>
           <li>placeholder    </li>
-          <li>dirname</li>
+          <li class="half">dirname</li>
           <li>multiple    </li>
           <li>list    </li>
           <li>min    </li>
           <li>max    </li>
           <li>step    </li>
-          <li class="half">novalidate </li>
-          <li class="half">low</li>
-          <li class="half">high</li>
+          <li>low</li>
+          <li>high</li>
           <li class="half">optimum</li>
+          <li>form</li>
+          <li class="half">minlength</li>
+          <li class="half">novalidate </li>
+          <li class="half">formnovalidate </li>
+          <li class="half">formaction </li>
+          <li class="half">formenctype </li>
+          <li class="half">formmethod</li>
+          <li class="half">formtarget</li>
+
     </ul>
     <footer><ul>
     <li>* pseudoclass :required can target.</li>
@@ -310,7 +326,7 @@ and attributes</h2>
           <header><h1>Labels</h1></header>
           <section>
           <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
-&lt;input id=&quot;inputID&quot; name=&quot;nm&quot; type=&quot;text&quot; /&gt;</pre>
+&lt;input id=&quot;inputID&quot; name=&quot;inputName&quot; type=&quot;text&quot; /&gt;</pre>
 <p>or</p>
 <pre contenteditable>
 &lt;label&gt;Label: &lt;input name=&quot;nm&quot; type=&quot;text&quot; /&gt;&lt;/label&gt;<br /></pre>
@@ -331,20 +347,7 @@ and attributes</h2>
         </div>
 
 
-        <div class="slide section">
-          <header><h1>CSS UI Pseudo Classes</h1></header>
-          <section class="content">
 
-
-  <p><small>Note that the following CSS is used in <strong>some</strong> of our live examples:</small></p>
-
-  <pre contenteditable>input:focus:<strong>invalid</strong> { background-color: lightPink;}
-input:<strong>valid</strong> { background-color: lightGreen }
-input:<strong>required</strong> {border: 2px dotted red;}
-input:<strong>optional</strong> {border: 2px solid green;}</pre>
-          </section>
-
-        </div>
 
 
 
@@ -355,15 +358,10 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
 &lt;input id=&quot;inputID&quot; name=&quot;inputName&quot;
   <strong><em>placeholder=&quot;placeholder text&quot;</em></strong>
-  pattern=&quot;\w{6,9}&quot;
-  required
-  autofocus
   type=&quot;text&quot;/&gt;</pre>
   <form><label for="xinputID">Label: </label>
 <input id="xinputID" name="xinputName"
   placeholder="placeholder text"
-  pattern="\w{6,9}"
-  required
   type="text"/></form>
   <footer>
   <ul class="icons">
@@ -388,22 +386,18 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
 &lt;input id=&quot;inputID&quot; name=&quot;inputName&quot;
   placeholder=&quot;\w{6,9}&quot;
   <strong><em>pattern=&quot;\w{6,9}&quot;</em></strong>
-  required
-  autofocus
   type=&quot;text&quot;/&gt;</pre>
   <p><label for="inputID2">6 to 9 characters: </label>
 
-<input id="inputID2" name="inputName" class="classed"
+<input id="inputID2" name="inputName"
   placeholder="\w{6,9}"
   pattern="\w{6,9}"
-  required
   type="text"/><br/>
   <label for="inputID_2">Color: </label>
 
-<input id="input_ID2" name="inputName2" class="classed"
+<input id="input_ID2" name="inputName2"
   placeholder="#BADA55"
   pattern="#[a-fA-F0-9]{6}"
-  required
   type="text"/> (#[a-fA-F0-9]{6})</p>
               <footer>
 
@@ -516,6 +510,23 @@ input:focus:required:valid {
     </section>
 </div>
 
+
+   <div class="slide section">
+          <header><h1>CSS UI Pseudo Classes</h1></header>
+          <section class="content">
+
+
+  <p><small>Note that the following CSS is used in <strong>some</strong> of our live examples:</small></p>
+
+  <pre contenteditable>input:focus:<strong>invalid</strong> { background-color: lightPink;}
+input:<strong>valid</strong> { background-color: lightGreen }
+input:<strong>required</strong> {border: 2px dotted red;}
+input:<strong>optional</strong> {border: 2px solid green;}</pre>
+          </section>
+
+        </div>
+
+
  <div class="slide section">
           <header><h1><em>autofocus</em> attribute</h1></header>
           <section class="content">
@@ -537,14 +548,15 @@ input:focus:required:valid {
 <pre contenteditable>$('[autofocus]').last().focus();</pre>
   <footer>
      <ul class="icons">
-  	   <li class="safari"> Safari</li>
+  	   <li class="safari">Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
-       <li class="ie new">IE10</li>
+       <li class="ie">IE10</li>
        <li class="txt">Not in mobile webkit</li>
 
  </ul>
+ <p><a href="files/autofocus.html" target="play">Test the autofocus attribute</a></p>
 
 
   </footer>
@@ -561,18 +573,18 @@ input:focus:required:valid {
   placeholder=&quot;placeholder text&quot;
   pattern=&quot;\w{6,9}&quot;
   required
-  autofocus
   <strong><em>form=&quot;notMyParentForm&quot;</em></strong>
   type=&quot;text&quot; /&gt;</pre>
   <p>Note: <code>form=&quot;&quot;</code> disassociates a form element from its parent form.</p>
   <ul class="icons">
-  	   <li class="safari iffy"> Safari</li>
+  	   <li class="safari"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
-       <li class="ie new">IE</li>
+       <li class="ie">IE</li>
 
  </ul>
+ <p><a href="files/form.html" target="play">Test the form attribute</a></p>
   <footer>
 
      </footer>
@@ -680,14 +692,14 @@ input:focus:required:valid {
 </li></ul>
   <footer>
      <ul class="icons">
-  	   <li class="safari half"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox iffy">Firefox</li>
+  	   <li class="safari new">Safari 8</li>
+       <li class="chrome">Chrome 20</li>
+       <li class="opera">Opera 11</li>
+  	   <li class="firefox">Firefox 29</li>
        <li class="ie iffy new">IE10</li>
      </ul>
 
-  <p style="margin-top:-20px">Mixed browser support for all of these.</p></footer>
+  <p style="margin-top:-20px">Android 4.4. Mixed support in IE10+/iOS8.</p></footer>
           </section>
 
         </div>
@@ -696,6 +708,45 @@ input:focus:required:valid {
 
 
 
+
+      <div class="slide">
+        <header><h1><em>list</em> attribute and &lt;datalist&gt;</h1></header>
+        <section class="content">
+        <pre contenteditable>
+&lt;label for=&quot;url&quot;&gt;Web Address: &lt;/label&gt;
+&lt;input id=&quot;url&quot; type=&quot;url&quot; name=&quot;url1&quot; placeholder=&quot;www.domain.com&quot; required  list=&quot;datalist1&quot; /&gt;
+
+&lt;datalist id=&quot;datalist1&quot;&gt;
+  &lt;option value=&quot;http://www.standardista.com&quot; /&gt;
+  &lt;option value=&quot;http://www.oreilly.com&quot; /&gt;
+  &lt;option value=&quot;http://www.evotech.net&quot; /&gt;
+&lt;/datalist&gt;</pre>
+
+
+<p><label for="url">Web Address: </label>
+<input id="url" type="url" name="url1" placeholder="http://www.domain.com" required  list="datalist1" />
+<a href="files/list.html" target="play" style="float: right;">Test out &lt;datalist&gt; &amp; list</a></p></p>
+<p>
+<label for="url2">Web Address2: </label>
+<input id="url2" type="url" name="url2" placeholder="http://www.domain.com" list="datalist1" /></p>
+
+<datalist id="datalist1">
+  <option value="http://www.standardista.com" />
+  <option value="http://www.oreilly.com" />
+  <option value="http://www.evotech.net" />
+</datalist>
+
+<ul class="icons">
+       <li class="safari no bad"> Safari</li>
+       <li class="chrome new">Chrome</li>
+       <li class="opera">Opera</li>
+       <li class="firefox">Firefox</li>
+       <li class="ie new">IE10</li>
+     </ul>
+
+        </section>
+
+      </div>
 
 
 
@@ -721,15 +772,23 @@ type="color"
 placeholder="#FFFFFF"
 pattern="#[0-9A-Fa-f]{6}"
 required />
-
+With list / datalist: <input type="color" list="colorsxx">
+<datalist id="colorsxx">
+  <option>#ff0000</option>
+  <option label="30">#ee0000</option>
+  <option label="midpoint">#dd0000</option>
+  <option>#cc0000</option>
+  <option>#bb0000</option>
+</datalist>
+</p>
   <footer>
    <ul class="icons">
-  	   <li class="safari no"> Safari</li>
-       <li class="chrome ">Chrome</li>
+  	   <li class="safari"> Safari 8</li>
+       <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
-  	   <li class="firefox new">Firefox 28</li>
-       <li class="ie no">IE11</li>
-       <li class="txt">Supported in BB</li>
+  	   <li class="firefox">Firefox 29</li>
+       <li class="ie bad">IE11</li>
+       <li class="txt">Supported in BB10 &amp; A4.4. Not in iOS8 </li>
      </ul>
   <p>Note: defaults to #000000, lowercase.</p>
   </footer>
@@ -745,12 +804,12 @@ required />
           <section class="content">
            <pre contenteditable>&lt;input  name="website" <strong><em>type="url"</em></strong> /&gt;</pre>
 <input name="website" type="url" required class="classed" /> <ul class="icons">
-  	   <li class="safari"> Safari</li>
+  	   <li class="safari iffy"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
        <li class="ie new">IE10</li>
-       <li class="txt">Yes iOS, no Android</li>
+       <li class="txt">kinda in iOS and Android</li>
      </ul>
 
  <small>Any prefix (http:// or even g:// accepted) </small>
@@ -799,7 +858,26 @@ name="phone"
 type="tel"
 placeholder="415-555-1212"
 class="classed"
-pattern="\d{3}\-\d{3}\-\d{4}" />
+pattern="\d{3}\-\d{3}\-\d{4}" /><br/>
+(<input
+id="phone"
+name="phoneA"
+type="tel"
+placeholder="415"
+class="classed"
+pattern="\d{3}" size="3" />) <input
+id="phone"
+name="phoneB"
+type="tel"
+placeholder="555"
+class="classed"
+pattern="d{3}" size=3 />  - <input
+id="phone"
+name="phoneC"
+type="tel"
+placeholder="1212"
+class="classed"
+pattern="\d{4}" size=4 />
 
   <footer><ul class="icons">
   	   <li class="safari half"> Safari</li>
@@ -835,13 +913,13 @@ placeholder="you@domain.com"
 class="classed"/>
   <footer>
      <ul class="icons" style="margin: -5px 0 -10px 0;">
-  	   <li class="safari half"> Safari</li>
+  	   <li class="safari"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
-       <li class="ie new">IE10</li>
+       <li class="ie">IE10</li>
      </ul>
-<small>multiple' emails separated with commas</small>	</footer>
+<small>multiple' emails separated with commas. A4, Saf 5, iOS3.1 don't validate</small>	</footer>
           </section>
 
         </div>
@@ -856,8 +934,8 @@ class="classed"/>
 		  </div>
 
             <div style="float:right; width: 40%">
-<p style="clear: both;">'number' specific attributes:</p>
-<ul><li>min</li><li>max</li><li>step</li></ul>
+<p style="clear: both;">'number/range/date' specific attributes:</p>
+<ul class="column columns"><li>min</li><li>max</li><li>step</li></ul>
 </div>
 
 
@@ -865,9 +943,7 @@ class="classed"/>
 <strong><em>type="number"</em></strong>
 placeholder="0, 5, 10 &hellip;"
 pattern="[0-9]*[05]"
-<strong><em>min="0"
-max="1000"
-step="5"</em></strong> /&gt;
+<strong><em>min="0" max="1000" step="5"</em></strong> /&gt;
 </pre>
 
 
@@ -877,15 +953,16 @@ step="5"</em></strong> /&gt;
           </section>
 <footer>
 <ul class="icons">
-  	   <li class="safari new"> Safari 6</li>
+  	   <li class="safari iffy"> Safari 5+</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
-  	   <li class="firefox no">Firefox</li>
-       <li class="ie no">IE10</li>
+  	   <li class="firefox">Firefox 29</li>
+       <li class="ie iffy">IE10</li>
      </ul>
 </footer>
 
 <ul>
+<li>Android 4, iOS, Safari and IE10 Chrome for Android don't show spinner
 <li>Supporting browsers have enhanced UI</li>
 <li>Safari associates :valid, but doesn't validate.</li></ul>
 
@@ -900,11 +977,7 @@ step="5"</em></strong> /&gt;
           <header><h1>range</h1></header>
           <section class="content">
           <pre contenteditable>&lt;input id="range" name="range"
-<strong><em>type="range"</em> </strong>
-placeholder="0 to 10"
-pattern="[0-9]|10"
-<strong><em>min="0" max="10"
-step="1"</em></strong>/&gt;
+<strong><em>type="range" min="0" max="10" step="1"</em></strong>/&gt;
 </pre>
 <input id="range" name="range"
 type="range"
@@ -936,6 +1009,54 @@ step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.quer
      </div>
 
 
+
+<div class="slide">
+  <header><h1>Numbers and Range with List</h1></header>
+    <section class="content">
+  <p>    <label for="yrange">Range: </label>
+<input type="range" id="yrange" list="qrangelist" min=0 max=10 step=1 /> </br>
+<p>    <label for="ynumber">Number: </label>
+<input type="number" id="ynumber" list="qrangelist" min=0 max=10 step=1 /> </br>
+
+</p>
+
+          <datalist id="qrangelist">
+            <option>7</option>
+            <option>8</option>
+            <option value=9></option>
+            <option value=10></option>
+          </datalist>
+<pre contenteditable>&lt;input type=range  list=mylist min=0 max=10 step=1 />
+&lt;input type=number list=mylist min=0 max=10 step=1 />
+&lt;datalist id="mylist">
+  &lt;option>7&lt;/option>
+  &lt;option>8&lt;/option>
+  &lt;option value=9>&lt;/option>
+  &lt;option value=10>&lt;/option>
+&lt;/datalist></pre>
+    </section>
+</div>
+
+
+<div class="slide">
+  <header><h1>multiple / vertical ranges</h1></header>
+    <section class="content">
+      <p><input type=range value="3,6" multiple min=0 max=10 step=1 />
+ <pre contenteditable>&lt;input type=range value="3,6" multiple /></pre>
+  <pre contenteditable>&lt;input type=range orient="vertical"> // FF
+
+input[type=range]{
+  width: 20px; height: 200px;
+  -webkit-appearance: slider-vertical; /* Saf,Chr,O */
+  writing-mode: bt-lr; /* IE */
+}</pre>
+ <input type=range orient="vertical"
+  style="width: 20px; height: 200px;
+  -webkit-appearance: slider-vertical;
+  writing-mode: bt-lr;">   </section>
+</div>
+
+
         <div class="slide section">
           <header><h1>search</h1></header>
           <section class="content">
@@ -950,8 +1071,8 @@ placeholder="search terms"/&gt;</pre><input
   	   <li class="safari"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
-  	   <li class="firefox iffy">Firefox</li>
-       <li class="ie new iffy">IE10</li>
+  	   <li class="firefox">Firefox</li>
+       <li class="ie">IE10</li>
      </ul>
 <p><small>Note: Dynamic keyboards will show "search" instead of "go"</small></p>
 <p><small>Warning: if you stylize the input, the 'delete' may not show</small></p>
@@ -969,7 +1090,7 @@ placeholder="search terms"/&gt;</pre><input
 
           <ul>
           	<li><label>date 		(2012-06-09)</label><input type="date" /></li>
-            <li><label>datetime 	(2012-06-09 19:00)</label><input type="datetime" /></li>
+            <li><label><strike>datetime 	(2012-06-09 19:00)</strike></label><input type="datetime" /></li>
             <li><label>datetime-local(2012-06-09 19:00)</label><input type="datetime-local" /></li>
             <li><label>month 		(2010-09)</label><input type="month" /></li>
             <li><label>time		(19:00)</label><input type="time" /></li>
@@ -977,12 +1098,13 @@ placeholder="search terms"/&gt;</pre><input
             </ul>
 		<footer>
             <ul class="icons">
-               <li class="safari"> Safari</li>
+               <li class="safari no">Safari7</li>
                <li class="chrome">Chrome</li>
                <li class="opera">Opera</li>
-               <li class="firefox no">Firefox</li>
-               <li class="ie no">IE</li>
+               <li class="firefox no">Firefox32</li>
+               <li class="ie no">IE11</li>
          </ul>
+         <p>Works in iOS5+, Android 4.4
      </footer>
           </section>
 
@@ -1147,44 +1269,6 @@ placeholder="search terms"/&gt;</pre><input
 
 
 
-
-      <div class="slide">
-      	<header><h1><em>list</em> attribute and &lt;datalist&gt;</h1></header>
-        <section class="content">
-        <pre contenteditable>
-&lt;label for=&quot;url&quot;&gt;Web Address: &lt;/label&gt;
-&lt;input id=&quot;url&quot; type=&quot;url&quot; name=&quot;url1&quot; placeholder=&quot;www.domain.com&quot; required  list=&quot;datalist1&quot; /&gt;
-
-&lt;datalist id=&quot;datalist1&quot;&gt;
-  &lt;option value=&quot;http://www.standardista.com&quot; /&gt;
-  &lt;option value=&quot;http://www.oreilly.com&quot; /&gt;
-  &lt;option value=&quot;http://www.evotech.net&quot; /&gt;
-&lt;/datalist&gt;</pre>
-
-
-<p><label for="url">Web Address: </label>
-<input id="url" type="url" name="url1" placeholder="http://www.domain.com" required  list="datalist1" /></p>
-<p>
-<label for="url2">Web Address2: </label>
-<input id="url2" type="url" name="url2" placeholder="http://www.domain.com" list="datalist1" /></p>
-
-<datalist id="datalist1">
-  <option value="http://www.standardista.com" />
-  <option value="http://www.oreilly.com" />
-  <option value="http://www.evotech.net" />
-</datalist>
-
-<ul class="icons">
-  	   <li class="safari no bad"> Safari</li>
-       <li class="chrome new">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox</li>
-       <li class="ie new">IE10</li>
-     </ul>
-
-        </section>
-
-      </div>
 
 
   <div class="slide">
