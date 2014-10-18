@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>list attribute</title>
+  <style>
+    li {margin-bottom: 1em;}
+  </style>
+</head>
+<body>
+  <p><strong>&lt;datalist></strong> and <strong>list</strong> attribute on text, range, number and color</p>
+  <form id="this" action="form.html">
+<ol>
+  <li><input type="text" list="numbers" /></li>
+  <li><input type="range" min="0" max="100" list="numbers" /></li>
+  <li><input type="number" min="0" max="100" list="numbers" />
+<datalist id="numbers">
+  <option>10</option>
+  <option label="30">30</option>
+  <option label="midpoint">50</option>
+  <option>70</option>
+  <option>90</option>
+</datalist></li>
+<li><input type="color" list="colors">
+<datalist id="colors">
+  <option>#ff0000</option>
+  <option label="30">#ee0000</option>
+  <option label="midpoint">#dd0000</option>
+  <option>#cc0000</option>
+  <option>#bb0000</option>
+</datalist>
+</li>
+
+</ol>
+<input type="submit">
+</form>
+</body>
+</html>

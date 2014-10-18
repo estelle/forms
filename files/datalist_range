@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Datalist and Range</title>
+</head>
+<body>
+<label for="xrange">Satisfaction</label>
+<input type="text" id="xrange" list="xrangelist" min=0 max=10 step=1 />
+
+          <datalist id="xrangelist">
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </datalist>
+</body>
+</html>
