@@ -28,10 +28,10 @@
 	<li class="button cancel" id="back">Back</li>
     <li class="button done" id="next">Next</li>
 </ul>
-      <div id="info">
+      <!--<div id="info">
     <p>Estelle Weyl &middot <a href="http://standardista.com">Standardista.com</a> &middot; <a href="http://www.twitter.com/estellevw">@estellevw</a> &middot;Press <span class="key">&larr;</span> and <span class="key">&rarr;</span> to change slides.
     </p>
-  </div>
+  </div>-->
       <div class="slides">
 
 
@@ -235,7 +235,8 @@ and attributes</h2>
       <li>height    </li>
       <li>width    </li>
       <li>checked*    </li>
-      <li><del>align</del>** </li>
+      <li><del>align</del>** <br/><br/>FORMS</li>
+
       <li class="half">action</li>
       <li class="half">method</li>
       <li class="half">accept-charset</li>
@@ -365,11 +366,11 @@ and attributes</h2>
   type="text"/></form>
   <footer>
   <ul class="icons">
-  		<li class="firefox">Firefox</li>
-  	   <li class="safari"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-       <li class="ie new">IE10</li>
+  		<li class="firefox">Firefox 4</li>
+  	   <li class="safari"> Safari 4 </li>
+       <li class="chrome">Chrome 10 </li>
+       <li class="opera">Opera 11</li>
+       <li class="ie">IE10</li>
        <li class="txt">Android 2.3, iOS5</li>
  </ul>
  </footer>
@@ -402,11 +403,11 @@ and attributes</h2>
               <footer>
 
                 <ul class="icons">
-                   <li class="safari"> Safari</li>
-                   <li class="chrome">Chrome</li>
-                   <li class="opera">Opera</li>
-                   <li class="firefox">Firefox</li>
-                   <li class="ie new">IE10</li>
+                   <li class="safari half"> Safari 5</li>
+                   <li class="chrome">Chrome 10</li>
+                   <li class="opera">Opera 11</li>
+                   <li class="firefox">Firefox 4</li>
+                   <li class="ie">IE10</li>
                    <li class="txt">UI only in mobile/safari</li>
 
              </ul>
@@ -442,11 +443,11 @@ and attributes</h2>
 input:required {border: 1px dashed #f00;}</pre>
 
   <ul class="icons">
-  		<li class="firefox">Firefox</li>
-  	   <li class="safari half"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-       <li class="ie new">IE10</li>
+  		<li class="firefox">Firefox 6</li>
+  	   <li class="safari half"> Safari 5</li>
+       <li class="chrome">Chrome 6</li>
+       <li class="opera">Opera 10</li>
+       <li class="ie ">IE 10</li>
        <li class="txt">UI only in mobile/safari</li>
  </ul>
 
@@ -532,20 +533,19 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
           <section class="content">
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
 &lt;input id=&quot;inputID&quot; name=&quot;inputName&quot;
-  placeholder=&quot;placeholder text&quot;
-  pattern=&quot;\w{6,9}&quot;
-  required
+  placeholder=&quot;placeholder text&quot; pattern=&quot;\w{6,9}&quot;
   <strong><em>autofocus</em></strong>
-  type=&quot;text&quot;/&gt;</pre>
+  required type=&quot;text&quot;/&gt;</pre>
   <p><label for="autofocusAttribute">Has Focus? </label>
 
 <input id="autofocusAttribute" name="inputName"  class="classed"
   placeholder="\w{6,9}"
   pattern="\w{6,9}"
-  required autofxocus
+  required autofocus
   type="text"/></p>
 <p>only one element can have the autofocus attribute</p>
-<pre contenteditable>$('[autofocus]').last().focus();</pre>
+<pre contenteditable>$('[autofocus]').<strike>last()</strike>.focus();
+$('[autofocus]').first().focus();</pre>
   <footer>
      <ul class="icons">
   	   <li class="safari">Safari</li>
@@ -673,7 +673,7 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
 
 
      <div class="slide">
-          <header><h1>13 New input types in HTML5</h1></header>
+          <header><h1><b style="position: relative;"><strike>13</strike> <span style="position: absolute; transform: translate(-20px, -20px) rotate(15deg); color: red;">12</span></b> New input types in HTML5</h1></header>
           <section class="content grow">
 <ul class="column">
 <li>color </li>
@@ -684,7 +684,7 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
 <li>range</li>
 <li>search </li>
 <li>date </li>
-<li>datetime </li>
+<li><strike>datetime</strike></li>
 <li>datetime-local</li>
 <li>month </li>
 <li>time</li>
@@ -692,14 +692,14 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
 </li></ul>
   <footer>
      <ul class="icons">
-  	   <li class="safari new">Safari 8</li>
+  	   <li class="safari iffy">Safari 8</li>
        <li class="chrome">Chrome 20</li>
        <li class="opera">Opera 11</li>
   	   <li class="firefox">Firefox 29</li>
-       <li class="ie iffy new">IE10</li>
+       <li class="ie iffy">IE 10</li>
      </ul>
 
-  <p style="margin-top:-20px">Android 4.4. Mixed support in IE10+/iOS8.</p></footer>
+  <p style="margin-top:-20px">Android 4.4. Mixed support in IE10+/Safari 8.</p></footer>
           </section>
 
         </div>
@@ -738,10 +738,10 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
 
 <ul class="icons">
        <li class="safari no bad"> Safari</li>
-       <li class="chrome new">Chrome</li>
+       <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
        <li class="firefox">Firefox</li>
-       <li class="ie new">IE10</li>
+       <li class="ie">IE 10</li>
      </ul>
 
         </section>
@@ -808,7 +808,7 @@ With list / datalist: <input type="color" list="colorsxx">
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
-       <li class="ie new">IE10</li>
+       <li class="ie">IE 10</li>
        <li class="txt">kinda in iOS and Android</li>
      </ul>
 
@@ -880,11 +880,11 @@ class="classed"
 pattern="\d{4}" size=4 />
 
   <footer><ul class="icons">
-  	   <li class="safari half"> Safari</li>
+  	   <li class="safari"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
-       <li class="ie new">IE10</li>
+       <li class="ie">IE10</li>
        <li class="txt">supported on mobile (keyboard)</li>
      </ul>
      </footer>
@@ -913,11 +913,11 @@ placeholder="you@domain.com"
 class="classed"/>
   <footer>
      <ul class="icons" style="margin: -5px 0 -10px 0;">
-  	   <li class="safari"> Safari</li>
+  	   <li class="safari half"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
-       <li class="ie">IE10</li>
+       <li class="ie">IE 10</li>
      </ul>
 <small>multiple' emails separated with commas. A4, Saf 5, iOS3.1 don't validate</small>	</footer>
           </section>
@@ -986,21 +986,26 @@ pattern="[0-9]|10"
 min="0" max="10"
 step="1" onChange="document.querySelector('#rangeit').innerHTML = (document.querySelector('#range').value);"/>  <small onClick="document.querySelector('#rangeit').innerHTML = (document.querySelector('#range').value);">Current Value: <output id="rangeit"></output></small>
 
- <pre contenteditable>&lt;input <strong><em>type="range"</em>  </strong>min="0" max="100" step="5"/&gt;
-
-input[type=range]{-webkit-appearance: slider-vertical;}</pre>
+ <pre contenteditable>&lt;input <strong><em>type="range"</em>  </strong>min="0" max="100" step="5"/&gt;</pre>
 <div style="float: left"><input id="range2" name="range"
 type="range"
 placeholder="0 to 100"
 min="0" max="100"
 step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.querySelector('#range2').value;"/>  <small onClick="document.querySelector('#rangeit2').innerHTML = document.querySelector('#range2').value;">Current Value: <output id="rangeit2"></output></small></div>
-
+<ul class="column columns">
+  <li>min</li>
+  <li>max</li>
+  <li>step</li>
+  <li>value</li>
+  <li>list</li>
+  <li>orient (FF only)</li>
+</ul>
         <footer>
           <ul class="icons">
-  	   <li class="safari new"> Safari</li>
+  	   <li class="safari "> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
-  	   <li class="firefox new">Firefox</li>
+  	   <li class="firefox ">Firefox 23</li>
        <li class="ie">IE</li>
      </ul>
      </footer>
@@ -1053,70 +1058,67 @@ input[type=range]{
  <input type=range orient="vertical"
   style="width: 20px; height: 200px;
   -webkit-appearance: slider-vertical;
-  writing-mode: bt-lr;">   </section>
+  writing-mode: bt-lr;">
+</section>
 </div>
 
 
-        <div class="slide section">
-          <header><h1>search</h1></header>
-          <section class="content">
-          <pre contenteditable>&lt;input
+<div class="slide section">
+  <header><h1>search</h1></header>
+  <section class="content">
+  <pre contenteditable>&lt;input
 id="search"
 name="search"
 <strong><em>type="search"</em></strong>
 placeholder="search terms"/&gt;</pre><input
   id="search" name="search" type="search"
   placeholder="search terms" />
-<ul class="icons">
-  	   <li class="safari"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox</li>
-       <li class="ie">IE10</li>
-     </ul>
-<p><small>Note: Dynamic keyboards will show "search" instead of "go"</small></p>
-<p><small>Warning: if you stylize the input, the 'delete' may not show</small></p>
-
-          </section>
-
-        </div>
+  <ul class="icons">
+     <li class="safari"> Safari</li>
+     <li class="chrome">Chrome</li>
+     <li class="opera">Opera</li>
+     <li class="firefox">Firefox</li>
+     <li class="ie">IE10</li>
+  </ul>
+  <p><small>Note: Dynamic keyboards will show "search" instead of "go"</small></p>
+  <p><small>Warning: if you stylize the input, the 'delete' may not show</small></p>
+</section>
+</div>
 
 
 
 
-        <div class="slide section labeled">
-          <header><h1>date &amp; time </h1></header>
-          <section class="content">
-
-          <ul>
-          	<li><label>date 		(2012-06-09)</label><input type="date" /></li>
-            <li><label><strike>datetime 	(2012-06-09 19:00)</strike></label><input type="datetime" /></li>
-            <li><label>datetime-local(2012-06-09 19:00)</label><input type="datetime-local" /></li>
-            <li><label>month 		(2010-09)</label><input type="month" /></li>
-            <li><label>time		(19:00)</label><input type="time" /></li>
-            <li><label>week		(2012-W23)</label><input type="week" /></li>
-            </ul>
-		<footer>
-            <ul class="icons">
-               <li class="safari no">Safari7</li>
-               <li class="chrome">Chrome</li>
-               <li class="opera">Opera</li>
-               <li class="firefox no">Firefox32</li>
-               <li class="ie no">IE11</li>
-         </ul>
-         <p>Works in iOS5+, Android 4.4
-     </footer>
-          </section>
-
-        </div>
+<div class="slide section labeled">
+  <header><h1>date &amp; time </h1></header>
+  <section class="content">
+  <ul>
+  	<li><label>date 		(2012-06-09)</label><input type="date" /></li>
+    <li><label><strike>datetime 	(2012-06-09 19:00)</strike></label><input type="datetime" /></li>
+    <li><label>datetime-local(2012-06-09 19:00)</label><input type="datetime-local" /></li>
+    <li><label>month 		(2010-09)</label><input type="month" /></li>
+    <li><label>time		(19:00)</label><input type="time" /></li>
+    <li><label>week		(2012-W23)</label><input type="week" /></li>
+    </ul>
+    <footer>
+      <ul class="icons">
+         <li class="safari no">Safari7</li>
+         <li class="chrome">Chrome</li>
+         <li class="opera">Opera</li>
+         <li class="firefox no">Firefox32</li>
+         <li class="ie no">IE11</li>
+      </ul>
+      <p>Works in iOS5+, Android 4.4
+    </footer>
+  </section>
+</div>
 
 
 
 
-        <div class="slide section">
-          <header><h1>when are dates useful?</h1></header>
-          <section class="content">
-          <pre contenteditable>&lt;input id="DOB" name="DOB"
+<div class="slide section">
+  <header><h1>when are dates useful?</h1></header>
+  <section class="content">
+  <pre contenteditable>&lt;input id="DOB" name="DOB"
  <strong><em>type="date"</em></strong>
  placeholder="YYYY-MM-DD"
  pattern="\d{4}\-\d{2}\-\d{2}"
@@ -1129,10 +1131,7 @@ placeholder="search terms"/&gt;</pre><input
  pattern="\d{4}\-\d{2}\-\d{2}"
  class="classed"
  required /> </p>
-
-
-
-          <pre contenteditable>&lt;input  name="time" id="time"
+<pre contenteditable>&lt;input  name="time" id="time"
  <strong><em>type="time"
  min="09:00"
  max="17:00"
@@ -1140,84 +1139,94 @@ placeholder="search terms"/&gt;</pre><input
  placeholder="12:00"
  required /&gt; </pre>
  <p>
- <label for="time">Appointment time: </label>
- <input type="time" min="09:00" max="17:00" name="time" id="time"
- step="900"
- placeholder="12:00"
- class="classed"
- required />  </p>
-
-          </section>
-
-        </div>
-
+   <label for="time">Appointment time: </label>
+   <input type="time" min="09:00" max="17:00" name="time" id="time"
+   step="900"
+   placeholder="12:00"
+   class="classed"
+   required />
+  </p>
+ </section>
+</div>
 
 
-        <div class="slide section">
-          <header><h1>HTML5 Form Element Attributes</h1></header>
-          <section class="content column">
-          <ul>
-          <li>required</li>
-          <li>min</li>
-          <li>max</li>
-          <li>step</li>
-          <li>placeholder</li>
-          <li>pattern</li>
-          <li>autofocus</li>
-          <li>autocomplete</li>
-          <li>form</li>
-          <li>list</li>
-          </ul>
-          <ul>
 
-          <li>type</li>
-          <li>readonly</li>
-          <li>disabled</li>
-          <li>maxlength</li>
-          <li>size<br/><br/><br/><br/><br/><br/><br/></li></ul>
 
-          </section>
 
-        </div>
+<div class="slide section">
+  <header><h1>HTML5 form control Attributes</h1></header>
+  <section class="content">
+    <ul class="column columns">
+      <li>name  </li>
+      <li>disabled*    </li>
+      <li>type    </li>
+      <li>maxlength    </li>
+      <li>readonly    </li>
+      <li>size    </li>
+      <li>value    </li>
+      <li>alt    </li>
+      <li>src    </li>
+      <li>height    </li>
+      <li>width    </li>
+      <li>checked*    </li>
+      <li class="half">autocomplete</li>
+      <li class="half">spellcheck</li>
+      <li>autofocus    </li>
+      <li>pattern    </li>
+      <li>required*    </li>
+      <li>placeholder    </li>
+      <li class="half">dirname</li>
+      <li>multiple    </li>
+      <li>list    </li>
+      <li>min    </li>
+      <li>max    </li>
+      <li>step    </li>
+      <li>low</li>
+      <li>high</li>
+      <li class="half">optimum</li>
+      <li>form</li>
+      <li class="half">minlength</li>
+      <li class="half">novalidate </li>
+      <li class="half">formnovalidate </li>
+      <li class="half">formaction </li>
+      <li class="half">formenctype </li>
+      <li class="half">formmethod</li>
+      <li class="half">formtarget</li>
+    </ul>
+  </section>
+</div>
 
-         <div class="slide section">
-          <header><h1>Validation</h1></header>
-          <section class="content">
 
-          <pre contenteditable>var validityObject = document.getElementById['form_control'].validity;</pre>
 
-<ul style="float: left; width: 16em;">
-<li>validityObject.valueMissing
-            </li>
+<div class="slide section">
+  <header><h1>Validation</h1></header>
+  <section class="content">
+    <pre contenteditable>var validityObject = document.getElementById['form_control'].validity;</pre>
+    <ul style="float: left; width: 16em;">
+      <li>validityObject.valueMissing</li>
+      <li>validityObject.typeMismatch</li>
+      <li>validityObject.patternMismatch</li>
+      <li>validityObject.tooLong</li>
+      <li>validityObject.rangeUnderflow</li>
+      <li>validityObject.rangeOverflow</li>
+      <li>validityObject.stepMismatch</li>
+      <li>validityObject.valid </li>
+      <li>validityObject.customError</li>
+    </ul>
 
-<li>validityObject.typeMismatch</li>
+    <div style="float:left; text-align: right; width: 200px">
+        <img src="images_why2/why_notvalid_required.gif" style="float:clear:both"/>
+        <img src="images_why2/why_notvalid_email.gif" style="margin-top: 40px;clear: both"/>
+    </div>
+  </section>
+</div>
 
-<li>validityObject.patternMismatch</li>
 
-<li>validityObject.tooLong</li>
+<div class="slide section">
+  <header><h1>Custom Error message</h1></header>
+  <section class="content">
 
-<li>validityObject.rangeUnderflow
-            </li>
-
-<li>validityObject.rangeOverflow</li>
-
-<li>validityObject.stepMismatch</li>
-
-<li>validityObject.valid </li>
-
-<li>validityObject.customError</li>
-</ul><div style="float:left; text-align: right; width: 200px">
-          <img src="images_why2/why_notvalid_required.gif" style="float:clear:both"/>
-          <img src="images_why2/why_notvalid_email.gif" style="margin-top: 40px;clear: both"/>
-          </div>
-          </section>
-
-        </div>
-        <div class="slide section">
-          <header><h1>Custom Error message</h1></header>
-          <section class="content">
-
-            <pre contenteditable>function validate() {
+    <pre contenteditable>function validate() {
   var input = document.getElementById('b');
   var validityState_object = input.validity;
   if(validityState_object.valueMissing) {
@@ -1229,80 +1238,86 @@ placeholder="search terms"/&gt;</pre><input
   } else {
     input.setCustomValidity('');
   }
-}
-          </pre><img src="images_why2/why_custom_message.gif" style="float:right; height: 100px"/>
-          </section>
+}</pre>
+<img src="images_why2/why_custom_message.gif" style="float:right; height: 100px"/>
+  </section>
 
-        </div>
+</div>
 
-
+<!--
 <div class="slide intro" style="background-image: url(images/sweetbrown.jpg); background-size: auto 100%">
   <header></header>
-    <section class="content"><h1 style="color: black; text-shadow: 0 0 13px white; font-size: 3rem;  text-align: right">"Ain't nobody <br/>got time <br/>for that." <br/>-- Sweet <br/>Brown</h1><!--<img src="images/sweet.png" alt="Ain't nobody got time for that. -- sweet brown"/>-->
+    <section class="content"><h1 style="color: black; text-shadow: 0 0 13px white; font-size: 3rem;  text-align: right">"Ain't nobody <br/>got time <br/>for that." <br/>-- Sweet <br/>Brown</h1><img src="images/sweet.png" alt="Ain't nobody got time for that. -- sweet brown"/>
     </section>
+</div>
+-->
+
+
+ <div class="slide section">
+  <header><h1>Custome Error message</h1></header>
+  <section class="content">
+<pre contenteditable>&lt;input type="tel" name="tel"
+placeholder="xxx-xxx-xxxx"
+<em>title="please enter a phone number with the
+pattern of XXX-XXX-XXXX"</em>
+pattern="\d{3}\-\d{3}\-\d{4}"
+required /></pre>
+<object data="titlemsg.html" style=" width: 300px; height:200px; float: left"></object>
+<object data="titlemsg2.html" style="width: 300px; height:200px;"></object>
+ <ul class="icons">
+   <li class="safari no"> Safari</li>
+   <li class="chrome">Chrome</li>
+   <li class="opera">Opera</li>
+   <li class="firefox">Firefox</li>
+   <li class="ie">IE</li>
+ </ul>
+ <p>validityObject.patternMismatch</p>
+</section>
 </div>
 
 
-
-         <div class="slide section">
-          <header><h1>Custome Error message</h1></header>
-          <section class="content">
-<pre contenteditable>&lt;input type="tel" name="tel"
-  placeholder="xxx-xxx-xxxx"
-  <em>title="please enter a phone number with the
-    pattern of XXX-XXX-XXXX"</em>
-  pattern="\d{3}\-\d{3}\-\d{4}"
-  required /></pre>
-            <object data="titlemsg.html" style=" width: 300px; height:200px; float: left"></object>
-         <object data="titlemsg2.html" style="width: 300px; height:200px;"></object>
-         <ul class="icons">
-               <li class="safari no"> Safari</li>
-               <li class="chrome">Chrome</li>
-               <li class="opera">Opera</li>
-               <li class="firefox">Firefox</li>
-               <li class="ie">IE</li>
-         </ul>
-         <p>validityObject.patternMismatch</p>
-          </section>
-
-        </div>
-
-
-
-
-
-  <div class="slide">
-      	<header><h1>&lt;meter&gt;, &lt;progress&gt; &amp; &lt;output&gt;</h1></header>
-      <section class="content" style="margin: -20px 20px">
-
-<pre contenteditable>&lt;meter value=75 min=0 max=100 &gt;75% full&lt;/meter&gt;</pre>
-<p>Gas tank:
-	<meter value="75" min="0" max="100">75% full</meter>
-</p>
-<pre contenteditable>&lt;progress&gt;loading...&lt;/progress&gt;</pre>
-<p>Please wait: <progress>loading...</progress> </p>
-<pre contenteditable>&lt;<b>progress</b> value="75" <b>max</b>="100"&gt;75% complete&lt;/<b>progress</b>&gt;</pre>
-<p>Download is: <progress value="75" max="100">75% complete</progress> </p>
-<pre contenteditable>&lt;<b>output</b>&gt;</pre>
-</pre>
-<ul class="icons" style="margin-top:0;">
-  	   <li class="safari new"> Safari</li>
+<div class="slide">
+  <header><h1>&lt;meter&gt;</h1></header>
+    <section class="content">
+<pre>&lt;meter value=1 min=0 max=4 low=1 high=3>1 of 4&lt;/meter></pre>
+<ul><li><meter value=0.5 min=0 max=4 low=1 high=3>0.5 of 4</meter></li>
+<li><meter value=1.5 min=0 max=4 low=1 high=3>1.5 of 4</meter></li>
+<li><meter value=2.5 min=0 max=4 low=1 high=3>2.5 of 4</meter></li>
+<li><meter value=3 min=0 max=4 low=1 high=3>3  of 4</meter></li>
+<li><meter value=4 min=0 max=4 low=1 high=3>4 of 4</meter></li>
+</ul>
+<pre contenteditable>
+&lt;meter value=<span id="meterfoo" contenteditable>61</span> min=0 max=100 low=73 high=87 optimum=100>D-&lt;/meter></pre>
+<ul>
+<li><meter value=61 min=0 max=100 low=73 high=87 optimum=100 id="meterbar">D-</meter></li>
+</ul>
+<ul class="icons">
+       <li class="safari bad"> Safari</li>
        <li class="chrome">Chrome</li>
        <li class="opera">Opera</li>
-  	   <li class="firefox new">Firefox</li>
-       <li class="ie half">IE</li>
+       <li class="firefox">Firefox</li>
+       <li class="ie bad">IE</li>
      </ul>
-</section>
+     <p><a href="http://css-tricks.com/html5-meter-element/">&lt;meter> explained</a></p>
+    </section>
+</div>
 
-      </div>
+<script>
+  var meterflip = document.getElementById('meterfoo');
+  meterflip.addEventListener('mouseout', function(e) {
+     var meterflipped = document.getElementById('meterbar');
+     meterflipped.value = meterflip.innerHTML;
+  })
+</script>
 
 
 
 
-      <div class="slide">
-      	<header><h1>Mo' &lt;meter&gt;</h1></header>
-      <section class="content" style="margin: 20px 10px">
-      <pre contenteditable>&lt;meter value=90 min=0 max=100 low=20 high=98&gt;75%&lt;/meter&gt;</pre>
+
+<div class="slide">
+	<header><h1>Mo' &lt;meter&gt;  (&amp; &lt;output&gt;)</h1></header>
+<section class="content" style="margin: 20px 10px">
+<pre contenteditable>&lt;meter value=90 min=0 max=100 low=20 high=98&gt;75%&lt;/meter&gt;</pre>
 <p>Gas tank: <meter id="meter1" value="90" min="0" max="100" low="20" high="98">90% full</meter>
 <input type=range min=0 max=100 value=90 id="meter1range" onChange="effect('meter1', 'meter1range')"/> <output id="meter1val"></output></p>
 
@@ -1315,6 +1330,9 @@ placeholder="search terms"/&gt;</pre><input
 <p>Blood Pressure: <meter id="meter3" value="125" min="50" max="200" low="90" high="119" optimum="100">125</meter>
 <input type=range min=0 max=200 value=125 id="meter3range" onChange="effect('meter3', 'meter3range')"/> <output id="meter3val"></output></p>
 
+<pre contenteditable>&lt;<b>output</b>&gt;&lt;<b>/output</b>&gt;</pre>
+</pre>
+
  <script defer>
  function effect(meter, meterrange) {
 	var currVal = document.getElementById(meterrange).value;
@@ -1323,27 +1341,33 @@ placeholder="search terms"/&gt;</pre><input
 
  }
  </script>
-
-</section>
-
-      </div>
-
-
-
-
-<div class="slide">
-<header>
-<h1>Speech Input
-</h1>
-</header>
-<section class="content">
-<pre contenteditable>&lt;input type="text" x-webkit-speech /&gt;</pre>
-<input type="text" x-webkit-speech />
 </section>
 </div>
 
 
 
+<div class="slide">
+  <header><h1>&lt;progress&gt;</h1></header>
+  <section class="content" style="margin: -20px 20px">
+
+<pre contenteditable>&lt;meter value=75 min=0 max=100 &gt;75% full&lt;/meter&gt;</pre>
+<p>Gas tank:
+  <meter value="75" min="0" max="100">75% full</meter>
+</p>
+<pre contenteditable>&lt;progress&gt;loading...&lt;/progress&gt;</pre>
+<p>Please wait: <progress>loading...</progress> </p>
+<pre contenteditable>&lt;<b>progress</b> value="75" <b>max</b>="100"&gt;75% complete&lt;/<b>progress</b>&gt;</pre>
+<p>Download is: <progress value="75" max="100">75% complete</progress> </p>
+
+<ul class="icons" style="margin-top:0;">
+       <li class="safari"> Safari 5/7</li>
+       <li class="chrome">Chrome 6</li>
+       <li class="opera">Opera 10 </li>
+       <li class="firefox">Firefox 6</li>
+       <li class="ie">IE 10</li>
+     </ul>
+</section>
+</div>
 
 
 

@@ -185,7 +185,7 @@ li.highlight { color: black;}
 }
 .slide section a:focus,
 .slide section a:active,
-.slide section a:hover { color: darkgrey; text-shadow: -9px 2px 2px hsla(0, 0%, 0%, 0.2);}
+.slide section a:hover { color: darkgrey;}
 
 
 
@@ -341,9 +341,9 @@ body {
 
 
 .slide {
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #fff;
-  box-shadow: -1px -1px 21px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px -1px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .slide .counter {
