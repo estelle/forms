@@ -1,0 +1,57 @@
+    .icons li {
+      width: 68px; height: 14px; display: inline-block;
+      background-image:url(../icons/browser_logos-64.png);
+      border-radius: 32px;
+      font-size: 0.5rem;
+      padding-top: 60px;
+      text-align:center;
+      position: relative;
+    }
+    .icons .firefox {background-position:-80px 0}
+    .icons .ie {background-position:-280px 0}
+    .icons .safari {background-position:-210px 0}
+    .icons .chrome {background-position:0 0 }
+    .icons .opera {background-position:-140px 0}
+    .icons .new:after {
+      content: "";
+      width: 40px;
+      height: 28px;
+      display:block;
+      position:absolute;
+      top: -8px;
+      right:-10px;
+      background-image:url(../icons/new.gif);
+    }
+    .icons .no {opacity: 0.10;}
+    .icons .bad,
+    .icons .iffy {opacity: 0.50;}
+    .icons .bad:after {
+      position:absolute;
+      top: -5px;
+      left:30px;
+      content: "";
+      background-color: red;
+      width: 10px;
+      height: 74px;
+      display:block;
+      -webkit-transform: rotate(30deg);
+      -moz-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      -o-transform: rotate(30deg);
+      transform: rotate(30deg);
+    }
+    .icons .half:after {
+      position:absolute;
+      top: 0;
+      right:0;
+      content: "";
+      background-color: rgba(255,255,255,0.9);
+      width: 30px;
+      height: 74px;
+      display:block;
+    }
+    .icons .txt {
+background-image: none;
+width: auto;
+font-size: 0.8rem;
+}

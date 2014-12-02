@@ -1,0 +1,12 @@
+.classed:focus:invalid {
+  background-color: lightPink;
+}
+.classed:valid:not([type=search]) {
+  background-color:lightGreen;
+}
+.classed:required {
+  border: 2px dotted red;
+}
+.classed:optional:not([type=search]) {
+  border: 2px solid green;
+}
