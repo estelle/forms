@@ -3,23 +3,8 @@
 <head>
 <meta charset="UTF-8">
 
-    <!--[if gte IE 9]>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <![endif]-->
-    <!--[if lt IE 9]>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
-    <![endif]-->
     <title>HTML5 Web Forms</title>
-   <!-- <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700&v2' rel='stylesheet' type='text/css'>-->
-    <link href="2014.css" rel="stylesheet">
-    <style>
-		.example li {clear:both; list-style-type:none;}
-		.example label {width: 200px; float: left;}
-    #range2 {
-      -webkit-appearance: slider-vertical;
-      -o-appearance: slider-vertical;
-      appearance: slider-vertical;}
-	</style>
+    <link href="css/index.css" rel="stylesheet">
   </head><body>
 
   <div class="presentation">
@@ -27,10 +12,6 @@
 	<li class="button cancel" id="back">Back</li>
     <li class="button done" id="next">Next</li>
 </ul>
-      <!--<div id="info">
-    <p>Estelle Weyl &middot <a href="http://standardista.com">Standardista.com</a> &middot; <a href="http://www.twitter.com/estellevw">@estellevw</a> &middot;Press <span class="key">&larr;</span> and <span class="key">&rarr;</span> to change slides.
-    </p>
-  </div>-->
       <div class="slides">
 
 
@@ -139,13 +120,13 @@ and attributes</h2>
 
 
 
-<div class="slide normal">
+<div class="slide">
   <header><h1>HTML 4 &lt;Input&gt; Types</h1></header>
   <section class="content grow">
      <ul class="column">
         <li>button</li>
         <li>checkbox</li>
-        <li>file*</li>
+        <li>file</li>
         <li>hidden</li>
         <li>image</li>
         <li>password</li>
@@ -154,11 +135,44 @@ and attributes</h2>
         <li>submit</li>
         <li>text</li>
     </ul>
-    <footer>Was disabled on iPad, iPhone, iPod Touch thru iOS5</footer>
   </section>
 </div>
 
-<div class="slide normal">
+<div class="slide">
+  <header><h1>&lt;input&gt; types new in HTML5</h1></header>
+  <section class="content">
+  <ul style="float: left; width: 40%;">
+        <li>button</li>
+        <li>checkbox</li>
+        <li>file</li>
+        <li>hidden</li>
+        <li>image</li>
+        <li>password</li>
+        <li>radio</li>
+        <li>reset</li>
+        <li>submit</li>
+        <li>text</li>
+    </ul>
+    <ul style="float: left; width: 40%;">
+        <li>color</li>
+        <li>date </li>
+        <li><del>datetime</del> </li>
+        <li><del>datetime-local</del> </li>
+        <li>email </li>
+        <li><del>month</del></li>
+        <li>number</li>
+        <li>range</li>
+        <li>search</li>
+        <li>tel</li>
+        <li>time</li>
+        <li>url</li>
+        <li><del>week</del></li>
+  </ul>
+  </section>
+
+</div>
+
+<div class="slide">
 <header><h1>File input type</h1></header><form enctype="multipart/form-data" method="post">
 <section class="content">
  <ul>
@@ -183,32 +197,13 @@ and attributes</h2>
 </div>
 
 
-<div class="slide normal">
-  <header><h1>&lt;input&gt; types new in HTML5</h1></header>
-  <section class="content grow">
-  <ul class="column">
-        <li>color</li>
-        <li>date </li>
-        <li>datetime-local </li>
-        <li>email </li>
-        <li>month </li>
-        <li>number </li>
-        <li>range </li>
-        <li>search</li>
-        <li>tel</li>
-        <li>time </li>
-        <li>url</li>
-        <li>week</li>
-  </ul>
-  </section>
-
-</div>
 
 
 
-<div class="slide normal">
+
+<div class="slide">
   <header><h1> &lt;input&gt; attributes in HTML 4</h1></header>
-  <section class="content grow">
+  <section class="content">
     <ul class="column">
       <li>name  </li>
       <li>disabled*    </li>
@@ -238,7 +233,7 @@ and attributes</h2>
 
 
 
-<div class="slide normal">
+<div class="slide">
   <header><h1> New &lt;input&gt; attributes in HTML5</h1></header>
   <section class="content">
     <ul class="column columns">
@@ -278,12 +273,12 @@ and attributes</h2>
 
 
 
-<div class="slide section grow">
+<div class="slide">
   <header><h1>Other form elements</h1></header>
   <section class="content">
   <div style="float: left; width: 45%;">
   <p>Old Elements</p>
-  <ul class="col">
+  <ul>
         <li>&lt;form&gt;</li>
         <li>&lt;fieldset&gt;</li>
         <li>&lt;legend&gt;</li>
@@ -295,9 +290,9 @@ and attributes</h2>
         <li>&lt;optgroup&gt;</li>
   </ul>
   </div>
-  <div style="float: left; margin-right: 100px">
+  <div style="float: left;">
   <p>New Elements</p>
-  <ul class="col">
+  <ul>
         <li>&lt;datalist&gt;</li>
         <li>&lt;output&gt;</li>
         <li>&lt;meter&gt;</li>
@@ -310,7 +305,7 @@ and attributes</h2>
 </div>
 
 
-        <div class="slide section">
+        <div class="slide">
           <header><h1>Labels</h1></header>
           <section>
           <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
@@ -340,7 +335,7 @@ and attributes</h2>
 
 
 
-        <div class="slide section">
+        <div class="slide">
           <header><h1><em>placeholder</em> attribute</h1></header>
           <section class="content">
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
@@ -367,7 +362,7 @@ and attributes</h2>
 
 
 
-         <div class="slide section">
+         <div class="slide">
           <header><h1><em>pattern</em> attribute</h1></header>
           <section class="content">
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
@@ -407,7 +402,7 @@ and attributes</h2>
 
 
 
-         <div class="slide section required">
+         <div class="slide required">
           <header><h1><em>required</em> attribute</h1></header>
           <section class="content">
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
@@ -449,7 +444,7 @@ input:required {border: 1px dashed #f00;}</pre>
 
 
 
-        <div class="slide section grow">
+        <div class="slide grow">
           <header><h1>Targeting in CSS without Touching HTML!</h1></header>
           <section class="content column">
             <p style="margin-top:0">UI Pseudo Classes</p><ul>
@@ -499,7 +494,7 @@ input:focus:required:valid {
 </div>
 
 
-   <div class="slide section">
+   <div class="slide">
           <header><h1>CSS UI Pseudo Classes</h1></header>
           <section class="content">
 
@@ -515,7 +510,7 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
         </div>
 
 
- <div class="slide section">
+ <div class="slide">
           <header><h1><em>autofocus</em> attribute</h1></header>
           <section class="content">
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
@@ -531,8 +526,7 @@ input:<strong>optional</strong> {border: 2px solid green;}</pre>
   required autofocus
   type="text"/></p>
 <p>only one element can have the autofocus attribute</p>
-<pre contenteditable>$('[autofocus]').<strike>last()</strike>.focus();
-$('[autofocus]').first().focus();</pre>
+<pre contenteditable>$('[autofocus]').first().focus();</pre>
   <footer>
      <ul class="icons">
   	   <li class="safari">Safari</li>
@@ -552,7 +546,7 @@ $('[autofocus]').first().focus();</pre>
         </div>
 
 
- <div class="slide section">
+ <div class="slide">
           <header><h1><em>form</em> attribute</h1></header>
           <section class="content">
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
@@ -581,7 +575,7 @@ $('[autofocus]').first().focus();</pre>
 
 
 
-  <div class="slide section">
+  <div class="slide">
           <header><h1><em>type</em> attribute</h1></header>
           <section class="content">
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
@@ -606,8 +600,7 @@ $('[autofocus]').first().focus();</pre>
        <li class="opera">Opera</li>
   	   <li class="firefox">Firefox</li>
        <li class="ie">IE</li>
-
- </ul><p>All browsers understand the <em>type</em> attribute, but not all values</p></footer>
+       <li class=txt><p>All browsers understand the <em>type</em> attribute, but not all values</p></li></ul></footer>
           </section>
 
         </div>
@@ -671,11 +664,11 @@ $('[autofocus]').first().focus();</pre>
 <li>range</li>
 <li>search </li>
 <li>date </li>
-<li><strike>datetime</strike></li>
-<li>datetime-local</li>
-<li>month </li>
 <li>time</li>
-<li>week
+<li><strike>datetime</strike></li>
+<li><del>datetime-local</del></li>
+<li><del>month </del></li>
+<li><del>week</del>
 </li></ul>
   <footer>
      <ul class="icons">
@@ -684,9 +677,10 @@ $('[autofocus]').first().focus();</pre>
        <li class="opera">Opera 11</li>
   	   <li class="firefox">Firefox 29</li>
        <li class="ie iffy">IE 10</li>
-     </ul>
 
-  <p style="margin-top:-20px">Android 4.4. Mixed support in IE10+/Safari 8.</p></footer>
+
+  <li class="txt">Android 4.4. Mixed support in IE10+/Safari 8.</li> </ul>
+</footer>
           </section>
 
         </div>
@@ -960,7 +954,7 @@ pattern="[0-9]*[05]"
 
 
 
-        <div class="slide section">
+        <div class="slide">
           <header><h1>range</h1></header>
           <section class="content">
           <pre contenteditable>&lt;input id="range" name="range"
@@ -1050,7 +1044,7 @@ input[type=range]{
 </div>
 
 
-<div class="slide section">
+<div class="slide">
   <header><h1>search</h1></header>
   <section class="content">
   <pre contenteditable>&lt;input
@@ -1102,7 +1096,7 @@ placeholder="search terms"/&gt;</pre><input
 
 
 
-<div class="slide section">
+<div class="slide">
   <header><h1>when are dates useful?</h1></header>
   <section class="content">
   <pre contenteditable>&lt;input id="DOB" name="DOB"
@@ -1140,7 +1134,7 @@ placeholder="search terms"/&gt;</pre><input
 
 
 
-<div class="slide section">
+<div class="slide">
   <header><h1>HTML5 form control Attributes</h1></header>
   <section class="content">
     <ul class="column columns">
@@ -1185,7 +1179,7 @@ placeholder="search terms"/&gt;</pre><input
 
 
 
-<div class="slide section">
+<div class="slide">
   <header><h1>Validation</h1></header>
   <section class="content">
     <pre contenteditable>var validityObject = document.getElementById['form_control'].validity;</pre>
@@ -1209,7 +1203,7 @@ placeholder="search terms"/&gt;</pre><input
 </div>
 
 
-<div class="slide section">
+<div class="slide">
   <header><h1>Custom Error message</h1></header>
   <section class="content">
 
@@ -1240,7 +1234,7 @@ placeholder="search terms"/&gt;</pre><input
 -->
 
 
- <div class="slide section">
+ <div class="slide">
   <header><h1>Custome Error message</h1></header>
   <section class="content">
 <pre contenteditable>&lt;input type="tel" name="tel"
@@ -1368,13 +1362,6 @@ required /></pre>
     </section>
 </div>
 
-<div class="slide intro">
-  <header>
-     <h1><a href="../development/flex.html">Flex ➹</a></h1>
-</header>
-    <section class="content">
-    </section>
-</div>
 
 
    </div>
