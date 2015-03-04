@@ -1,12 +1,10 @@
 .slide {
-  transform: translate(100%, 0) scale(0.1) rotate(180deg);
+  transform: translate(0, -1400px) scale(0.1) rotate(180deg);
   position: absolute;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
   top: 0; left: 0;
   &.future {
-     transform: translate(45%, -50%) scale(0.2) rotate(-90deg);
+     transform: translate(45%, -60%) scale(0.2) rotate(-90deg);
   }
 
   -webkit-transition: all 0.25s ease-in;
@@ -14,6 +12,8 @@
 
   &.current {
   transform: translate(0%) scale(1) rotate(0deg);
+  width: 100vw;
+  height: 100vh;
   }
   &.past, &.far-past {
   transform: translate(-100%, 0) scale(0.1) rotate(0deg);

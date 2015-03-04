@@ -1,0 +1,27 @@
+pre, style {
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background: rgba(255,255,255, 0.1);
+  border-radius: 8px;
+  border: 1px solid  rgba(255,255,255, 0.4);
+  line-height: 1.6;
+  tab-size: 2;
+}
+pre {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+pre {
+text-align: left;
+font-size: 1.4rem;
+line-height: 1.8rem;
+padding: 0rem 1rem;
+background: linear-gradient(to top, #ecefE4 50%, #FFF 50%);
+background-size: 100% 3.6rem;
+background-position: 0 1.8rem;
+background-clip: padding-box;
+border-radius: 8px;
+border: 1px solid rgba(0, 0, 0, 0.2);
+}

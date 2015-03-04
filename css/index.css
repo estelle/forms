@@ -61,19 +61,19 @@ header, section {
   padding: 10px 20px; }
 
 .slide {
-  transform: translate(100%, 0) scale(0.1) rotate(180deg);
+  transform: translate(0, -1400px) scale(0.1) rotate(180deg);
   position: absolute;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
   top: 0;
   left: 0;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in; }
   .slide.future {
-    transform: translate(45%, -50%) scale(0.2) rotate(-90deg); }
+    transform: translate(45%, -60%) scale(0.2) rotate(-90deg); }
   .slide.current {
-    transform: translate(0%) scale(1) rotate(0deg); }
+    transform: translate(0%) scale(1) rotate(0deg);
+    width: 100vw;
+    height: 100vh; }
   .slide.past, .slide.far-past {
     transform: translate(-100%, 0) scale(0.1) rotate(0deg); }
 
@@ -115,6 +115,9 @@ h2 {
 h1:first-child {
   margin-top: 0; }
 
+b {
+  color: red; }
+
 h3 {
   font-size: 1.4rem; }
 
@@ -155,9 +158,11 @@ strong, a {
   box-sizing: border-box;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, cursive,serif; }
 
-.slide.intro {
+.intro header h1, .intro header h2 {
   text-align: center;
-  font-size: 2rem; }
+  font-size: 3rem; }
+.intro header p {
+  text-align: center; }
 
 .slide.intro hgroup {
   margin-top: 200px; }
@@ -186,6 +191,12 @@ div.example {
 .col2 {
   -webkit-columns: 3 250px;
   columns: 3 250px; }
+
+.why {
+  display: flex;
+  justify-content: center; }
+  .why > div {
+    flex: 1; }
 
 /* OBJECT PAGES */
 .object header {
@@ -395,7 +406,7 @@ strike {
 
 .example label {
   width: 200px;
-  float: left; }
+  display: inline-block; }
 
 #range2 {
   -webkit-appearance: slider-vertical;
@@ -427,6 +438,20 @@ strike {
 li small {
   opacity: 0.5; }
 
+.slide:nth-of-type(n+12) input:focus:invalid {
+  background-color: lightPink; }
+.slide:nth-of-type(n+12) input:required {
+  border: 2px dotted red; }
+.slide:nth-of-type(n+12) input:optional {
+  border: 2px solid green; }
+
+.slide:nth-of-type(n+12):not(:nth-of-type(35)) input:not([type=color]):valid {
+  background-color: lightGreen; }
+
+.labeled label {
+  width: 15em;
+  display: inline-block; }
+
 :root {
   font-size: 162.5%; }
 
@@ -438,8 +463,9 @@ body {
   height: 100%;
   left: 0px;
   top: 0px;
-  background: #f3f3f3;
-  color: #333; }
+  background: #fcfcfc;
+  color: #333;
+  font-size: 1.3rem; }
 
 a, strong
 dt {

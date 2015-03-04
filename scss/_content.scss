@@ -13,12 +13,18 @@ h1 {
   font-size:1.8rem;
   margin-bottom: 0px;
 }
+.title h1 {
+  text-align: center;
+  line-height: 80vh;
+  font-size: 3rem;
+}
 h2 {
   font-size: 1.6rem;
 }
 h1:first-child {
   margin-top: 0;
 }
+b {color: red;}
 h3 {
   font-size: 1.4rem
 }
@@ -46,16 +52,10 @@ a:hover {
 }
 
 
-strong {
+strong, a {
   color: #ddaa00;
 }
 
-.content {
-  font-size: 2rem;
-}
-.content input, button {
-  font-size: 2rem;
-}
 .slide textarea.mynotes {
     -webkit-appearance: none;
     border: 1px #aaa solid;
@@ -69,9 +69,14 @@ strong {
     font-family:"Palatino Linotype", "Book Antiqua", Palatino, cursive,serif;
    }
 
-.slide.intro {
+.intro header {
+  h1, h2{
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
+  }
+  p {
+    text-align: center;
+  }
 }
 .slide.intro hgroup {
   margin-top: 200px;
@@ -81,13 +86,10 @@ strong {
   text-align: center;
 }
 .slide.section,.slide.intro header {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .slide li {
     margin-bottom: 10px;
-}
-.slide p{
-  font-size: 2rem;
 }
 
 .force-render {
@@ -105,14 +107,15 @@ div.example {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-a[target=play] {
-  position: absolute;
-  top: 10px;
-  left: 40%;
-  background: black;
-  color: white;
-  height: 40px; width: 40px; line-height:45px;
-  text-align: center;
-  border-radius: 50%;
-  &:hover {text-decoration: none; color: pink; font-weight: bold;}
+
+.col2 {
+  -webkit-columns: 3 250px;
+  columns: 3 250px;}
+
+.why {
+  display: flex;
+  justify-content: center;
+  > div {
+    flex: 1;
+  }
 }
