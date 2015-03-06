@@ -337,13 +337,46 @@ and attributes</h2>
 
 
 
+<div class="slide">
+<header>
+  <h1>HTML<b>5</b> Form</h1>
+</header>
+<section>
+    <form action="#" class="example">
+    <ul>
+        <li><label for="zname">Name</label><input type="text" class="classed" required placeholder=" Name" id="zname"/></li>
+        <li><label for="zemail">Email</label><input type="email"  class="classed"  multiple placeholder="email addresses" required id="zemail"/></li>
+        <li><label for="zdob">Birthday</label><input type="date"  class="classed"  required placeholder="01/01/84" id="zdob"/></li>
+        <li><label for="zage">Age</label><input type="number"  class="classed"  required min="21" max="105" id="zage"/></li>
+        <li><label for="zphone">Phone</label><input type="tel" class="classed"  pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX" id="zphone"/></li>
+        <li><label for="zrange">Satisfaction</label><input type="range" id="zrange" min="0" max="10" step="1" list="zrangelist"  />
+
+          <datalist id="zrangelist">
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </datalist>
+        <li><label for="ztweet">Twitter</label><input type="text"  class="classed"  pattern="@\w*" placeholder="@twitter" required id="ztweet"/></li>
+        <li>
+        <input type="submit" value="submit"></li>
+                        </ul>
+    </form>
+  </section>
+
+</div>
+
+
+
+
+
 
         <div class="slide">
           <header><h1><em>placeholder</em> attribute</h1></header>
           <section class="content">
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
 &lt;input id=&quot;inputID&quot; name=&quot;inputName&quot;
-  <strong><em>placeholder=&quot;placeholder text&quot;</em></strong>
+  <strong>placeholder=&quot;placeholder text&quot;</strong>
   type=&quot;text&quot;/&gt;</pre>
   <form><label for="xinputID">Label: </label>
 <input id="xinputID" name="xinputName"
@@ -371,7 +404,7 @@ and attributes</h2>
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
 &lt;input id=&quot;inputID&quot; name=&quot;inputName&quot;
   placeholder=&quot;\w{6,9}&quot;
-  <strong><em>pattern=&quot;\w{6,9}&quot;</em></strong>
+  <strong>pattern=&quot;\w{6,9}&quot;</strong>
   type=&quot;text&quot;/&gt;</pre>
   <p><label for="inputID2">6 to 9 characters: </label>
 
@@ -412,7 +445,7 @@ and attributes</h2>
 &lt;input id=&quot;inputID&quot; name=&quot;inputName&quot;
   placeholder=&quot;placeholder text&quot;
   pattern=&quot;\w{6,9}&quot;
- <strong><em> required</em></strong>
+ <strong> required</strong>
   type=&quot;text&quot;/&gt;</pre>
   <p>
 <input id="requiredAttribute" name="inputName"  class="classed"
@@ -515,7 +548,7 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
 <pre>input<b>:-webkit-autofill</b> {
   background-color: #FAFFBD;
   background-image: none;
-  color: #000;
+  color: #000;     <input name="name" style="border: 1px solid; background: #fff;">
 }</pre>
           </section>
 
@@ -528,7 +561,7 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
 <pre contenteditable>&lt;label for=&quot;inputID&quot;&gt;Label: &lt;/label&gt;
 &lt;input id=&quot;inputID&quot; name=&quot;inputName&quot;
   placeholder=&quot;placeholder text&quot; pattern=&quot;\w{6,9}&quot;
-  <strong><em>autofocus</em></strong>
+  <strong>autofocus</strong>
   required type=&quot;text&quot;/&gt;</pre>
   <p><label for="autofocusAttribute">Has Focus? </label>
 
@@ -566,7 +599,7 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
   placeholder=&quot;placeholder text&quot;
   pattern=&quot;\w{6,9}&quot;
   required
-  <strong><em>form=&quot;notMyParentForm&quot;</em></strong>
+  <strong>form=&quot;notMyParentForm&quot;</strong>
   type=&quot;text&quot; /&gt;</pre>
   <p>Note: <code>form=&quot;&quot;</code> disassociates a form element from its parent form.</p>
   <ul class="icons">
@@ -596,7 +629,7 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
   pattern=&quot;\w{6,9}&quot;
   required
   autofocus
-  <strong><em>type=&quot;text&quot;</em></strong> /&gt;</pre>
+  <strong>type=&quot;text&quot;</strong> /&gt;</pre>
   <p><label for="tyoeAttribute">Appearance? </label>
 
 <input id="typeAttribute" name="inputName"  class="classed"
@@ -750,11 +783,11 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
           <header><h1>color</h1></header>
           <section class="content">
            <pre contenteditable>&lt;input name="color"
-<strong><em>type="color"</em></strong> /&gt;   <input name="color0" type="color" /></pre>
+<strong>type="color"</strong> /&gt;   <input name="color0" type="color" /></pre>
 
 
           <pre contenteditable>&lt;input id="color" name="color"
-<strong><em>type="color"</em></strong> <input
+<strong>type="color"</strong> <input
 id="color"
 name="color"
 type="color"
@@ -796,14 +829,14 @@ required /&gt;</pre>
           <header><h1>url</h1></header>
           <section class="content"><img src="images/url_phone.jpg"  alt="URL input type in iphone and android" style="position: absolute; top: 100px; right: 20px;"/>
 <ul class="icons">
-           <pre contenteditable>&lt;input  name="website" <strong><em>type="url"</em></strong> /&gt;  <input name="website" type="url" required class="classed" />  </pre>
+           <pre contenteditable>&lt;input  name="website" <strong>type="url"</strong> /&gt;  <input name="website" type="url" required class="classed" />  </pre>
 
 
  <small>Any prefix (http:// or even g:// accepted) </small>
           <pre contenteditable>&lt;input
 id="website"
 name="url"
-<strong><em>type="url"</em></strong>      <input
+<strong>type="url"</strong>      <input
 id="rul"
 name="url"
 type="url"
@@ -831,11 +864,11 @@ pattern="(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.\/]*"/&gt;</pre>
           <header><h1>tel</h1></header>
           <section class="content">
           <img src="images/tel_phone.png" alt="tel input type on iphone" style="float:right;"/>
-           <pre contenteditable>&lt;input name="telephone" <strong><em>type="tel"</em></strong> /&gt;  <input name="telephone" type="tel" /></pre>
+           <pre contenteditable>&lt;input name="telephone" <strong>type="tel"</strong> /&gt;  <input name="telephone" type="tel" /></pre>
 
 <p>Custom Keyboard. No validation.</p>
           <pre contenteditable>&lt;input
-id="phone" name="phone" <strong><em>type="tel"</em></strong>
+id="phone" name="phone" <strong>type="tel"</strong>
 placeholder="415-555-1212"    <input
 id="phone"
 name="phone"
@@ -882,18 +915,18 @@ pattern="\d{4}" size=4 />
           <header><h1>email</h1></header>
           <section class="content">
           <img src="images/email_phone.png" alt="email input type on iphone" style="float:right;"/>
-           <pre contenteditable>&lt;input name="address" <strong><em>type="email"</em></strong>&gt; <input name="eaddress" type="email" style="width:500px;" required
+           <pre contenteditable>&lt;input name="address" <strong>type="email"</strong>&gt; <input name="eaddress" type="email" style="width:500px;" required
 class="classed"/></pre>
 
 <p>Keyboard changes &amp; validation!</p>
 
 <pre contenteditable>&lt;input id="email" name="email"
-<strong><em>type="email"</em></strong>  <input id="email" name="email" type="email" placeholder="you@domain.com"
+<strong>type="email"</strong>  <input id="email" name="email" type="email" placeholder="you@domain.com"
   multiple
   required
 class="classed"/>
 placeholder="you@domain.com"
-<strong><em>multiple</em></strong> /&gt;</pre>
+<strong>multiple</strong> /&gt;</pre>
 
 
   <footer>
@@ -912,16 +945,21 @@ placeholder="you@domain.com"
 <div class="slide">
           <header><h1>number</h1></header>
           <section class="content">
-           	<pre contenteditable style="white-space:nowrap; overflow:visible">&lt;input name="n" <strong><em>type="number"</em></strong>&gt;      <input name="n" type="number"/></pre>
+           	<pre contenteditable style="white-space:nowrap; overflow:visible">&lt;input name="n" <strong>type="number"</strong>&gt;      <input name="n" type="number"/></pre>
 
 
-            <p>'number/range/date' specific attributes: <b>min</b>, <b>max</b>, <b>step</b></p>
+            <p>'number/range/date' specific attributes: <em>min</em>, <em>max</em>, <em>step</em></p>
 
-<pre contenteditable style="clear:both">&lt;input id="nickels"
-<strong><em>type="number"</em></strong>                  <input id="nickel" type="number" placeholder="0, 5, 10 &hellip;"  pattern="[0-9]*[05]" min="0" max="1000" step="5"  class="classed"/>
-<strong><em>min="0" max="1000" step="5"</em></strong>
+<pre contenteditable style="clear:both">&lt;input id="nickels" type="<strong>number</strong>" <input id="nickel" type="number" placeholder="0, 5, 10 &hellip;"  pattern="[0-9]*[05]" min="0" max="1000" step="5"  class="classed"/>
+<strong>min</strong>="0" <strong>max</strong>="1000" <strong>step</strong>="5"
 placeholder="0, 5, 10 &hellip;" /&gt;
 </pre>
+
+
+<pre contenteditable>&lt;input type="<strong>number</strong>" <input type="number" max="0" step="any"/>
+max="0" step="any" /&gt;
+</pre>
+
 
 
 
@@ -945,7 +983,7 @@ placeholder="0, 5, 10 &hellip;" /&gt;
         <div class="slide">
           <header><h1>range</h1></header>
           <section class="content">
-          <pre contenteditable>&lt;input <strong><em>type="range" min="0" max="10" step="1"</em></strong>/&gt;
+          <pre contenteditable>&lt;input <strong>type="range" min</strong>="0" <strong>max</strong>="10" <strong>step</strong>="1"/&gt;
 </pre>
 <input id="range" name="range"
 type="range"
@@ -954,7 +992,7 @@ pattern="[0-9]|10"
 min="0" max="10"
 step="1" onChange="document.querySelector('#rangeit').innerHTML = (document.querySelector('#range').value);"/>  <small onClick="document.querySelector('#rangeit').innerHTML = (document.querySelector('#range').value);">Current Value: <output id="rangeit"></output></small>
 
- <pre contenteditable>&lt;input <strong><em>type="range"</em>  </strong>min="0" max="100" step="5"/&gt;</pre>
+ <pre contenteditable>&lt;input type="<strong>range</strong>"  <strong>min</strong>="0" <strong>max</strong>="100" <strong>step</strong>="5"/&gt;</pre>
 <div style="float: left"><input id="range2" name="range"
 type="range"
 placeholder="0 to 100"
@@ -999,9 +1037,10 @@ step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.quer
             <option value=9></option>
             <option value=10></option>
           </datalist>
-<pre contenteditable>&lt;input type=range  list=mylist min=0 max=10 step=1 />
-&lt;input type=number list=mylist min=0 max=10 step=1 />
-&lt;datalist id="mylist">
+<pre contenteditable>&lt;input type=range <strong>list=lst</strong> min=0 max=10>
+&lt;input type=number <strong>list=lst</strong> min=0 max=10>
+
+&lt;datalist <strong>id="lst"</strong>>
   &lt;option>7&lt;/option>
   &lt;option>8&lt;/option>
   &lt;option value=9>&lt;/option>
@@ -1037,7 +1076,7 @@ step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.quer
 id="search"  <input
   id="search" name="search" type="search" />
 name="search"
-<strong><em>type="search"</em></strong>&gt;</pre>
+<strong>type="search"</strong>&gt;</pre>
   <ul class="icons">
      <li class="safari"> Safari</li>
      <li class="chrome">Chrome</li>
@@ -1084,10 +1123,10 @@ name="search"
   <header><h1>when are dates useful?</h1></header>
   <section class="content">
   <pre contenteditable>&lt;input id="DOB" name="DOB"
- <strong><em>type="date"</em></strong>
+ <strong>type="date"</em></strong>
  placeholder="YYYY-MM-DD"
  pattern="\d{4}\-\d{2}\-\d{2}"
- <strong><em>min="1900-01-01"</em></strong> /&gt; </pre>
+ <strong>min="1900-01-01"</strong> /&gt; </pre>
  <p><label for="dob">Date of Birth: </label>
  <input id="dob" name="dob"
  type="date"
@@ -1097,10 +1136,10 @@ name="search"
  class="classed"
  required /> </p>
 <pre contenteditable>&lt;input  name="time" id="time"
- <strong><em>type="time"
+ <strong>type="time"
  min="09:00"
  max="17:00"
- step="900" </em></strong>
+ step="900"</strong>
  placeholder="12:00"
  required /&gt; </pre>
  <p>
@@ -1224,8 +1263,8 @@ name="search"
   <section class="content">
 <pre contenteditable>&lt;input type="tel" name="tel"
 placeholder="xxx-xxx-xxxx"
-<em>title="please enter a phone number with the
-pattern of XXX-XXX-XXXX"</em>
+<strong>title="please enter a phone number with the
+pattern of XXX-XXX-XXXX"</strong>
 pattern="\d{3}\-\d{3}\-\d{4}"
 required /></pre>
 <object data="titlemsg.html" style=" width: 300px; height:200px; float: left"></object>

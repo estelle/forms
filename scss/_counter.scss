@@ -6,6 +6,6 @@ body {counter-reset: pagecount;}
   content: counter(pagecount);
   color: #cc0000;
   position: absolute;
-  bottom: 2rem;
-  left: 1rem;
+  bottom: 0;
+  left: 0;
 }
