@@ -12,14 +12,18 @@
 @import "content_forms";
 @import "theme_white";
 .presentation > ul:first-child {
+  position: relative; top: -30px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   li {
+    font-size: 0.9rem;
     border-radius: 5px;
     background-color: rgba(0,0,0,0.1);
     border: 1px solid rgba(0,0,0,0.2);
     padding: 3px 10px;
+    cursor: pointer;
+    z-index: 1000;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
     &:hover {
       transform: translate(1px, 1px);

@@ -114,6 +114,7 @@ div.example {
 
 .why {
   display: flex;
+  align-items: baseline;
   justify-content: center;
   > div {
     flex: 1;

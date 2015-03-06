@@ -488,13 +488,13 @@ input {
   padding: 5px 30px;
 }
 input<strong>:required</strong> {
-  background-image: url('../images/required.png');
+  background-image: url('../img/required.png');
 }
 input:focus<strong>:invalid</strong> {
-  background-image: url('../images/invalid.png');
+  background-image: url('../img/invalid.png');
 }
 input:focus<strong>:valid</strong> {
-  background-image: url('../images/valid.png');
+  background-image: url('../img/valid.png');
 }</pre>
     </section>
 </div>
@@ -507,7 +507,7 @@ input:focus<strong>:valid</strong> {
 
   <p><small>Note that the following CSS is used in <strong>some</strong> of our live examples:</small></p>
 
-  <pre contenteditable>input:focus<strong>:invalid</strong> { background-color: lightPink;}
+  <pre contenteditable>input:focus<strong>:invalid</strong> { background-color: pink;}
 input<strong>:valid</strong> { background-color: lightGreen }
 input<strong>:required</strong> {border: 2px dotted red;}
 input<strong>:optional</strong> {border: 2px solid green;}</pre>
@@ -857,7 +857,7 @@ name="phoneB"
 type="tel"
 placeholder="555"
 class="classed"
-pattern="d{3}" size=3 />  - <input
+pattern="\d{3}" size=3 />  - <input
 id="phone"
 name="phoneC"
 type="tel"
@@ -1014,19 +1014,18 @@ step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.quer
 <div class="slide">
   <header><h1>multiple / vertical ranges</h1></header>
     <section class="content">
-      <p><input type=range value="3,6" multiple min=0 max=10 step=1 />
- <pre contenteditable>&lt;input type=range value="3,6" multiple /></pre>
-  <pre contenteditable>&lt;input type=range <b>orient="vertical"</b>> // FF
 
-input[type=range]{
-  width: 20px; height: 200px;
-  <b>-webkit-appearance: slider-vertical</b>; /* Saf,Chr,O */
-  <b>writing-mode: bt-lr</b>; /* IE */
-}</pre>
- <input type=range orient="vertical"
+ <pre contenteditable>&lt;input type=range value="3<b>,</b>6" <b>multiple</b> /><input type=range value="3,6" multiple min=0 max=10 step=1 /></pre>
+  <pre contenteditable>&lt;input type=range <b>orient="vertical"</b>> // FF</pre>
+
+ <pre contenteditable><input type=range orient="vertical"
   style="width: 20px; height: 200px;
   -webkit-appearance: slider-vertical;
-  writing-mode: bt-lr;">
+  writing-mode: bt-lr; position: absolute; left: 98%;">input[type=range]{
+  width: 20px; height: 200px;
+  <b>-webkit-appearance: slider-vertical</b>;
+  <b>writing-mode: bt-lr</b>; /* IE */
+}</pre>
 </section>
 </div>
 
@@ -1167,7 +1166,8 @@ name="search"
 <div class="slide">
   <header><h1>Validation</h1></header>
   <section class="content">
-    <pre contenteditable>var validityObject = document.getElementById['form_control'].validity;</pre>
+    <pre contenteditable>var validityObject =
+  document.getElementById['control'].validity;</pre>
     <ul style="float: left; width: 16em;">
       <li>validityObject.valueMissing</li>
       <li>validityObject.typeMismatch</li>

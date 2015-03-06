@@ -12,28 +12,6 @@ body {
   background: #333333;
   color: #ddd; }
 
-#info {
-  position: absolute;
-  bottom: 0px;
-  left: 40%;
-  z-index: 500;
-  color: #fff; }
-  #info * {
-    font-size: 0.5rem; }
-
-/* optional */
-#topinfo {
-  font-size: small;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  z-index: 500; }
-
-.key {
-  font-weight: bold;
-  padding: 3px;
-  background-color: rgba(255, 255, 255, 0.3); }
-
 #presentation {
   position: absolute;
   height: 100%;
@@ -46,10 +24,10 @@ body {
 .slides {
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 100%;
+  width: 1120px;
   height: 100%;
   left: 0;
-  top: 0;
+  top: -70px;
   position: absolute;
   display: block;
   -webkit-transition: -webkit-transform 1s ease-in-out;
@@ -58,7 +36,9 @@ body {
   transform: scale(0.8); }
 
 header, section {
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 960px; }
 
 .slide {
   transform: translate(0, -1400px) scale(0.1) rotate(180deg);
@@ -69,13 +49,13 @@ header, section {
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in; }
   .slide.future {
-    transform: translate(45%, -60%) scale(0.2) rotate(-90deg); }
+    transform: translate(45%, -60%) scale(0.2) rotate(-90deg);
+    -webkit-pointer-events: none; }
   .slide.current {
-    transform: translate(0%) scale(1) rotate(0deg);
-    width: 100vw;
-    height: 100vh; }
+    transform: translate(0%) scale(1) rotate(0deg); }
   .slide.past, .slide.far-past {
-    transform: translate(-100%, 0) scale(0.1) rotate(0deg); }
+    transform: translate(-100%, 0) scale(0.1) rotate(0deg);
+    pointer-events: none; }
 
 /* CSS Counter */
 body {
@@ -194,6 +174,7 @@ div.example {
 
 .why {
   display: flex;
+  align-items: baseline;
   justify-content: center; }
   .why > div {
     flex: 1; }
@@ -482,14 +463,19 @@ pre em {
   color: #00F; }
 
 .presentation > ul:first-child {
+  position: relative;
+  top: -30px;
   display: flex;
   justify-content: space-between;
   list-style-type: none; }
   .presentation > ul:first-child li {
+    font-size: 0.9rem;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 3px 10px;
+    cursor: pointer;
+    z-index: 1000;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
     .presentation > ul:first-child li:hover {
       transform: translate(1px, 1px);

@@ -12,7 +12,7 @@
 	padding: 10px;
 	}
 /* top of box, behind arrow */
-::-webkit-validation-bubble-arrow-clipper  { 
+::-webkit-validation-bubble-arrow-clipper  {
 	background-color:lime;
 	padding: 10px;
 }
@@ -39,7 +39,7 @@
 
 /*the arrow */
 ::-webkit-validation-bubble-arrow {
-	
+
 	background: none;
     background: magenta;
     border-color: #444;
@@ -60,7 +60,7 @@ function validate() {
 	var input = document.getElementById('b');
 	var validityState_object = input.validity;
 	if(validityState_object.valueMissing) {
-		input.setCustomValidity('Please set an age (required)');	
+		input.setCustomValidity('Please set an age (required)');
 	} else if (input.rangeUnderflow) {
         input.setCustomValidity('Your value is too low');
     } else if (input.rangeOverflow) {

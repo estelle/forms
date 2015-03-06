@@ -5,6 +5,7 @@
   top: 0; left: 0;
   &.future {
      transform: translate(45%, -60%) scale(0.2) rotate(-90deg);
+    -webkit-pointer-events: none;
   }
 
   -webkit-transition: all 0.25s ease-in;
@@ -12,10 +13,9 @@
 
   &.current {
   transform: translate(0%) scale(1) rotate(0deg);
-  width: 100vw;
-  height: 100vh;
   }
   &.past, &.far-past {
   transform: translate(-100%, 0) scale(0.1) rotate(0deg);
+  pointer-events: none;
   }
 }
