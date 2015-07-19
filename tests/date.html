@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>date Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+input:focus:invalid { background-date: #CCCCCC; }
+input[type="submit"] {padding: 9px;}
+p {margin-bottom: 5em;}
+</style>
+</head>
+
+<body>
+  <h1>date Example</h1>
+<form action="" method="get">
+
+<p><label for="dob">Date of Birth: </label><input id="dob" name="dob" type="date" placeholder="YYYY-MM-DD" min="1900-01-01" required /> </p>
+<p><label for="dte">date: </label><input id="dte" name="dte" type="text" placeholder="YYYY-MM-DD" pattern="\d{4}\-\d{2}\-\d{2}" required /> (text type with pattern matching)</p>
+
+<p><input type="submit" value="Test Me" />
+</p>
+
+<p><label for="date">Date: </label><input id="date" name="date" type="date" placeholder="YYYY-MM-DD" required /> </p>
+</form>
+</body>
+</html>

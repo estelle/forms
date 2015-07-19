@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+<style>
+input:disabled {background-color: #ccc;}
+</style>
+</head>
+
+<body>
+<form method="post" action="vacation_hold.php" id="vacation_hold">
+<ul>
+    <li>
+        <label for="fullname">Full Name:</label>
+        <input type="text"  name="fullName" id="fullname" placeholder="Full Name" required />
+    </li>
+    <li>
+        <label for="vhEmail">Email Address:</label>
+        <input type="email"  id="vhEmail" name="email" placeholder="Account Holder's Email Address"/>
+    </li>
+    <li>
+        <input type="checkbox"  value="yes"  id="rememberme"/> 
+        <label for="rememberme">Remember me on this computer</label>
+    </li>		
+</ul>
+<p>To access your account, please provide the following:</p>
+<ul>
+    <li>
+        <label for="account">Account Number:</label>
+        <input type="text"  name="account" id="account" placeholder="Account Number" pattern="NB\d{8}-[0-3]"/>
+    </li>
+	<li>
+    	<label for="phone">Phone Number</label>
+		<input type="tel"  name="phoneNumber" id="phone" placeholder="XXX-XXX-XXXX" pattern="[\(]?[0-9]{3}[-\.\) ]?[0-9]{3}[-\.\) ]?[0-9]{4}" />
+	</li>
+	<li>
+    	<label for="hn">House Number:</label>
+		<input type="text" id="hn" name="hn"/>
+    </li>
+	<li>
+    	<label for="holdlength">How many days would you like us to hold your paper?</label>
+        <input type="number" min="7" max="60" placeholder="Minimum is 7 days" name="hn"/>
+     </li>
+     <li>
+     	<label for="startdate">Start holding the paper on:</label>
+        <input type="date" min="2011-12-24" max="2012-02-22" name="startdate" id="startdate"/>
+      </li>
+     <li>
+     	<input type="submit" value="Place my paper on hold"/>
+ 	</li>
+
+    <li>
+        <label for="about">Article Title</label>
+        <input type="text" name="about" id="about" value="HTML5 and CSS3 Continue to rock" disabled />
+    </li>
+
+ </ul>
+ </form>	
+        
+				
+</body>
+</html>

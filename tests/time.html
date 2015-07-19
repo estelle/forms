@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>time Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+input:focus:invalid { background-time: #CCCCCC; }
+input[type="submit"] {padding: 9px;}
+</style>
+</head>
+
+<body>
+  <h1>time input type</h1>
+<form action="" method="get">
+<p><label for="time">time: </label><input type="time" min="09:00" max="17:00" name="time" id="time" step="900" placeholder="12:00" required />  </p>
+<p><label for="tme">time: </label><input id="tme" name="tme" type="text" placeholder="HH:MM" pattern="[0-2][0-9]\:[0-5][0-9]" required /> (text type with pattern matching)</p>
+
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

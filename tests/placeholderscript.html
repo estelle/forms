@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>placeholder Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style>
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+ :invalid { background-color: red; }
+</style>
+</head>
+
+<body>
+  <h1>placeholder</h1>
+<form action="" method="get">
+<p><label for="text">text with required: </label><input id="text" type="text" name="text1" placeholder="name@domain.com" required /></p>
+<p><label for="text2">text2: </label><input id="text2" type="text" name="text2" placeholder="8 chars" /></p>
+<p><input type="submit" value="Test Me" />
+</form>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+$("input[placeholder], textarea[placeholder]").each(function(){
+  if($(this).val()==""){
+    $(this).val($(this).attr("placeholder"));
+    $(this).focus(function(){
+      if($(this).val()==$(this).attr("placeholder")) {
+            $(this).val("");
+            $(this).removeClass('placeholder');
+      }
+    });
+    $(this).blur(function(){
+      if($(this).val()==""){
+         $(this).val($(this).attr("placeholder"));
+         $(this).addClass('placeholder');
+      }
+     });
+  }
+});
+
+$('form').submit(function(){
+	// first do all the checking for required element and form validation.
+	// Only remove placeholders before final submission
+  var placeheld = $(this).find('[placeholder]');
+  for(var i=0; i<placeheld.length; i++){
+  if(($( placeheld[i]).val()==$( placeheld[i]).attr('placeholder'))) {
+        // if not required, set value to empty before submitting
+        $( placeheld[i]).attr('value','');
+    }
+  }
+
+});
+</script>
+</body>
+</html>

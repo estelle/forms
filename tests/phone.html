@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Telephone Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+input:focus:invalid { background-color: #CCCCCC; }
+input:valid { background-color:#00FF33; }
+input:required {border: 2px solid #0066FF;}
+input:optional {border: 2px solid #330033;}
+
+</style>
+</head>
+
+<body>
+  <h1><em>tel</em> input type</h1>
+<form action="" method="get">
+<p><label for="tel">Pattern Telephone: </label><input id="tel" type="tel" placeholder="XXX-XXX-XXXX" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /></p>
+<p><label for="tel2">No Pattern Telephone: </label><input id="tel2" type="tel" placeholder="XXX-XXX-XXXX" required name="tel2" /></p>
+<p><label for="tel3">Optional: </label><input id="tel3" type="tel" placeholder="XXX-XXX-XXXX"  name="tel3" /></p>
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

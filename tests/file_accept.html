@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>File Upload Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">/*
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+ :invalid { background-color: red; }
+ input[type="file"]::-webkit-file-upload-button {position: absolute; top: 200px;}
+ input[type="file"]::-webkit-file-upload-button::after {content: 'foo';}
+
+ input[type="file"] {color: green;}*/
+</style>
+</head>
+
+<body>
+
+<h1>accept="xxx/*;capture=xxx"</h1>
+<form action="" method="get">
+<p><label for="file">File: </label><input id="file" type="file" name="file1" placeholder="upload a file"  multiple accept="image/*;capture=camera" /> - image</p>
+<p><label for="file3">File: </label><input id="file3" type="file" name="file3" placeholder="upload a file" multiple accept="video/*;capture=camcorder"/> - video</p>
+<p><label for="file2">file2: </label><input id="file2" type="file" name="file2" placeholder="upload a file"  multiple accept="audio/*;capture=microphone"/> - microphone</p>
+<p><input type="submit" value="Test Me" />
+</form>
+
+<h1>accept="xxx/*" </h1>
+<form action="" method="get">
+<p><label for="fileb">File: </label><input id="fileb" type="file" name="file1b" placeholder="upload a file"  multiple accept="image/*"/> - image</p>
+<p><label for="file3b">File: </label><input id="file3b" type="file" name="file3b" placeholder="upload a file" multiple accept="video/*"/> - video</p>
+<p><label for="file2b">file2: </label><input id="file2b" type="file" name="file2b" placeholder="upload a file"  multiple accept="audio/*"/> - microphone</p>
+<p><input type="submit" value="Test Me" />
+</form>
+
+
+<h1>accept="xxx/*" capture="xxx"</h1>
+<form action="" method="get">
+<p><label for="filea">File: </label><input id="filea" type="file" name="file1a" placeholder="upload a file"  multiple accept="image/*" capture=camera /> - image</p>
+<p><label for="file3a">File: </label><input id="file3a" type="file" name="file3a" placeholder="upload a file" multiple accept="video/*" capture=camcorder/> - video</p>
+<p><label for="file2a">file2: </label><input id="file2a" type="file" name="file2a" placeholder="upload a file"  multiple accept="audio/*" capture=microphone/> - microphone</p>
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

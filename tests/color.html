@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Color Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+input:focus:invalid { background-color: #CCCCCC; }
+</style>
+</head>
+
+<body>
+  <h1><em>color</em> input type</h1>
+<form action="" method="get">
+<p><label for="color">Color: </label><input id="color" name="color" type="color" placeholder="#FFFFFF" required /> (color)</p>
+<p><label for="color2">Color: </label><input id="color2" name="color2" type="text" placeholder="#FFFFFF" pattern="#(?:[0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})" required /> (pattern="#[a-fA-F0-9]{6}")</p>
+<p><label for="color3">LCColor: </label><input id="color3" name="color3" type="text" placeholder="#ffffff" pattern="#(?:[0-9a-f]{6}|[0-9a-f]{3})" required /> (pattern="#[a-f0-9]{6}")</p>
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

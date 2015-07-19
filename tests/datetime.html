@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>datetime Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px; width: 300px;}
+input:focus:invalid { background-datetime: #CCCCCC; }
+input[type="submit"] {padding: 9px;}
+</style>
+</head>
+
+<body>
+  <h1>datetime Example</h1>
+<form action="" method="get">
+<p><label for="datetime">datetime: </label><input id="datetime" name="datetime" type="datetime" placeholder="YYYY-MM-DD" min="2010-01-01T00:00Z"  max="2011-12-31T23:59Z" required /> </p>
+<p><label for="dte">datetime: </label><input id="dte" name="dte" type="text" placeholder="YYYY-MM-DDT00:00Z" pattern="\d{4}\-\d{2}\-\d{2}T\d\d\:\d\dZ" required /> (text type with pattern matching)</p>
+
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

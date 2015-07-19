@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 Sample Validation Page</title>
+<style type="text/css">
+
+
+::-webkit-validation-bubble {
+	background-color: #fff;
+	}
+::-webkit-validation-bubble-arrow-clipper  {}
+::-webkit-validation-bubble-arrow {
+	background: #fff;}
+::-webkit-validation-bubble-message {
+	font-size: 20px;
+	color: #282828;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	background: #ffffff;
+}
+
+::-webkit-validation-bubble-message {
+    color: #eee;
+    background: #000;
+    border-color: #444;
+    -webkit-box-shadow: 4px 4px 4px rgba(100,100,100,0.5);
+}
+
+::-webkit-validation-bubble-message:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(http://trac.webkit.org/export/90202/trunk/Source/WebCore/inspector/front-end/Images/errorMediumIcon.png)
+}
+
+::-webkit-validation-bubble-arrow {
+    background: #000;
+    border-color: #444;
+    -webkit-box-shadow: 0 0 0 0;
+}
+
+
+</style>
+</head>
+<body>
+  <h1>setCustomValidity with JavaScript</h1>
+<form id="form1" method="get">
+<label>Age: <input id="b" type="number" name="age"  min="18" max="60" step="1" required> (between 18 and 60)</label>
+
+<script>
+
+function validate() {
+	var input = document.getElementById('b');
+	var validityState_object = input.validity;
+	if(validityState_object.valueMissing) {
+		input.setCustomValidity('Please set an age (required)');
+	} else if (validityState_object.rangeUnderflow) {
+        input.setCustomValidity('You\'re too young');
+    } else if (validityState_object.rangeOverflow) {
+        input.setCustomValidity('You\'re too old');
+    } else if (validityState_object.stepMismatch) {
+        input.setCustomValidity('Counting half birthdays?');
+    } else {
+		//if valid, must reset because customError will be true
+        input.setCustomValidity('');
+    }
+}
+</script>
+<input type="submit" value="send"  onclick="validate()"/>
+</form>
+</body>
+</html>
+

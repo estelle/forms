@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Range Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {height:100px; width: 16px; -webkit-appearance: slider-vertical;}}
+
+</style>
+</head>
+
+<body>
+  <h1>Range</h1>
+<form action="range.html" method="get">
+<p>A number between 0 and 10</p>
+<p>
+<label for="range">range: </label>
+<input id="range" name="range" type="range" placeholder="0 to 10" pattern="[0-9]|10" min="0" max="10" step="1" required />
+</p>
+
+<p>Any number between 10 and 0</p>
+<p>
+<label for="range2">range: </label>
+<input id="range2" name="range2" type="range" placeholder="10 to 0" pattern="[0-9]|10" min="30" max="20" valuer="9" step="-1" required value=20 />
+</p>
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

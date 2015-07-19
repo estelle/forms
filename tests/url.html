@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>URL Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+ :invalid { background-color: red; }
+</style>
+</head>
+
+<body>
+<form action="url.html" method="get">
+<p><label for="url">Web Address: </label><input id="url" type="url" placeholder="xxx://www.domain.com" required /></p>
+<p><label for="url2">Web Address 2: </label><input id="url2" type="url" placeholder="xxx://www.domain.com" /></p>
+<p><label for="url3">With RegExp: </label><input id="url3" type="url" placeholder="http://www.domain.com" pattern="^https?://.*" required /></p>
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

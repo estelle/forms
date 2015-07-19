@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Datalist Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style>
+input[list],
+datalist select {
+float: left;
+height: 1.4em;
+position: relative;
+
+}
+input[list] {
+z-index: 2;
+width: 20em;
+}
+datalist select {
+width: 1.2em;
+
+}
+</style>
+</head>
+
+<body>
+<h1>datalist that degrades to a select</h1>
+<form action="" method="get">
+<input type="text" name="animal" list="dl_animals" id="animals" />
+<datalist id="dl_animals">
+<select id="slct_animal">
+	<option value="moo">Cow</option>
+	<option value="sssss">Banana Slug</option>
+	<option value="bah">Sheep</option>
+</select>
+</datalist>
+</form>
+
+<script>
+var select = document.getElementById('slct_animal'),
+input = document.getElementById('animals');
+select.addEventListener('change', function() {
+	input.value = this.value;
+}, false);
+</script></body>
+</html>

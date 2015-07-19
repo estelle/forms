@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Checkboxes and Radio Examples</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+
+ :invalid { background-color: red; }
+</style>
+</head>
+
+<body>
+  <h1>checkbox and radio Examples</h1>
+<form method="get">
+  <p>Checkboxes</p>
+  <label><input type=checkbox value=a name=checked checked> <span>Checked</span></label><br />
+    <label><input type=checkbox value=b name=not_checked> <span>Not Checked</span></label><br />
+      <label><input type=checkbox value=c name=indeterminate id=i> <span>Indeterminate</span> </label><br/>
+
+
+        <p>Radio buttons</p>
+    <label><input type=radio value=a name=checkedr> <span>Not default</span></label><br />
+    <label><input type=radio value=b name=checkedr required> <span>Required</span></label><br />
+      <label><input type=radio value=c name=checkedr id=i> <span>Not default</span> </label>
+
+<p><input type=submit value="sumit"></p>
+
+  <p>buttons</p>
+   <p><input type="submit" id="submit1"></p>
+  <p><input type="submit" id="submit2"></p>
+  <p><input type="reset"></p>
+
+    <p>Select</p>
+    <select name="foo">
+      <option>no</option>
+      <option>no</option>
+      <option>no</option>
+      <option selected>yes</option>
+      <option>no</option>
+              </select>
+			</form>
+</body>
+</html>

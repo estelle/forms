@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>URL Example</title>
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+ :invalid { background-color: red; }
+</style>
+</head>
+
+<body>
+  <h1>datalist</h1>
+<form action="" method="get">
+<p><label for="url">Web Address: </label><input id="url" type="url" name="url1" placeholder="www.domain.com" required  list="datalist1" /></p>
+<p><label for="url2">Web Address 2: </label><input id="url2" type="url" name="url2" placeholder="www.domain.com" list="datalist1" /></p>
+<datalist id="datalist1">
+	<option value="http://www.standardista.com" />
+	<option value="http://www.oreilly.com" />
+	<option value="http://www.evotech.net" />
+</datalist>
+<p>Datalist with graceful degradation</p>
+<p><label for="url3">Web Address 3: </label><input id="url3"  name="url3" type="url" placeholder="www.domain.com" list="datalist2" /></p>
+<datalist id="datalist2">
+  <label>
+   or select one from the following list:</label>
+   <select name="url4">
+	<option value="http://www.standardista.com" label="standardista" />
+	<option value="http://www.oreilly.com" label="apress" />
+	<option value="http://www.evotech.net" label="Evotech"/>
+  </select>
+</datalist>
+<p><input type="submit" value="Test Me" />
+</form>
+The datalist element represents a set of option  elements that represent predefined options for other controls. The contents of the element represents fallback content for legacy user agents, intermixed with option  elements that represent the predefined options. In the rendering, the datalist  element represents  nothing and it, along with its children, should be hidden.
+
+The datalist element is hooked up to an input element using the list attribute on the input element. The datalist element can also be used with a datagrid element, as the source of autocompletion hints for editable cells.
+
+Each option element that is a descendant of the datalist element, that is not disabled, and whose value is a string that isn't the empty string, represents a suggestion. Each suggestion has a value and a label.
+</body>
+</html>

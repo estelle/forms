@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>datetime-local Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px; width: 300px;}
+input:focus:invalid { background-datetime-local: #CCCCCC; }
+input[type="submit"] {padding: 9px;}
+</style>
+</head>
+
+<body>
+  <h1>datetime-local Example</h1>
+<form action="" method="get">
+<p><label for="datetime-local">datetime-local: </label><input id="datetime-local" name="datetime-local" type="datetime-local" placeholder="YYYY-MM-DDT" min="2010-01-01T00:00"  max="2011-12-31T23:59" required /> </p>
+<p><label for="dte">datetime-local: </label><input id="dte" name="dte" type="text" placeholder="YYYY-MM-DDT00:00" pattern="\d{4}\-\d{2}\-\d{2}T\d\d\:\d\d" required /> (text type with pattern matching)</p>
+
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

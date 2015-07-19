@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Testing output</title>
+<meta name="viewport" content="width=320, initial-scale=1.0"/>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+  <h1>output</h1>
+<form oninput="output.value = (val1.valueAsNumber || 0) * (val2.valueAsNumber || 0)">
+<input type="number" name="val1">
+X
+<input type="number" name="val2">
+=
+<output name="output">0</output>
+<p><input type="submit" value="Test Me" />
+<input type=reset>
+</form>
+<script>/*
+document.getElementById('val1').addEventListener('change', function(){ multiply();});
+document.getElementById('val2').addEventListener('change', function(){ multiply();});
+
+function multiply() {
+	var v1 = document.getElementById('val1').value || 0;
+	var v2 = document.getElementById('val2').value || 0;
+	document.getElementById('output').innerHTML = v1 * v2;
+}*/
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Range Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<style type="text/css">
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+
+ :invalid { background-color: red; }
+</style>
+</head>
+
+<body>
+  <h1>Range</h1>
+<form action="range.html" method="get">
+<p>A number between 0 and 10</p>
+<p>
+<label for="range">range: </label>
+<input id="range" name="range" type="range" placeholder="0 to 10" pattern="[0-9]|10" min="0" max="10" step="1" required />
+</p>
+<hr/>
+<p>with `multiple` attribute and value="20,30"
+<p>Any number between 20 and 30</p>
+<p>
+<label for="range2">range (multiple): </label>
+<input id="range2" name="range2" type="range" min="20" max="30" step="-1" required multiple value="20,30" />
+</p>
+
+<p>Any number between 30 and 20</p>
+<p>
+<label for="range3">range (multiple): </label>
+<input id="range3" name="range3" type="range" min="30" max="20" step="-1" multiple value="20,30" />
+</p>
+
+<p>Any number between 30 and 20</p>
+<p>
+<label for="range3">range (multiple): </label>
+<input id="range3" name="range3" type="range" min="30" max="20" multiple value="20,30" />
+</p>
+
+<p>Any number between 30 and 20</p>
+<p>
+<label for="range3">range (multiple): </label>
+<input id="range3" name="range3" type="range"  max="20" step="-1" multiple value="20,30" />
+</p>
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

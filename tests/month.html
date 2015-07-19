@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+<meta  charset="UTF-8" />
+<title>month Example</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style>
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input {vertical-align:top; height:18px; font-size: 16px;}
+input:focus:invalid { background-month: #CCCCCC; }
+input[type="submit"] {padding: 9px;}
+</style>
+</head>
+
+<body>
+  <h1>month input type</h1>
+<form action="" method="get">
+<p><label for="month">month: </label><input id="month" name="month" type="month" placeholder="YYYY-MM" required min="2010-01" max="2020-01" step="6" /> (January or July Only)</p>
+<p><label for="dte">month: </label><input id="dte" name="dte" type="text" placeholder="YYYY-MM" pattern="\d{4}\-\d{2}" required /> (text type with pattern matching)</p>
+
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>

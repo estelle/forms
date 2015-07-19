@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Email Example</title>
+<meta name="viewport" content="width=device-width"/>
+<style>
+body, ul, li {
+	margin:0;
+	padding:5px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+input:required { background-color: #FFFFFF; border: 1px solid #FF0000;}
+ input:read-only { background-color: #dddddd; border: 1px solid #999999; }
+input, label {float:left;}
+label::before {content: ‘*’; color: #FF0000; font-weight: bold; float:left; }
+ li {clear:both;}
+input:checked + label {color: #666666; font-style: italic; }
+
+
+</style>
+</head>
+
+<body>
+  <h1><em>checkbox</em> input type</h1>
+  <p><em>indeterminate</em> state is set with javascript</p>
+<form action="" method="get">
+<ul>
+	<li><input type="checkbox" id="c1" name="chk" required /> <label for="c1">Bananas</label></li>
+	<li><input type="checkbox" id="c2" name="chk" readonly /> <label for="c2">Oranges</label></li>
+	<li><input type="checkbox" id="c3" name="chk" /> <label for="c3">Strawberries</label></li>
+	<li><input type="checkbox" id="c4" name="chk" /> <label for="c4">Blueberries</label></li>
+</ul>
+<p>Checked / Unchecked / Indeterminate</p>
+<ul>
+<li><input type=checkbox checked name=checked value="a">  Checked </li>
+<li><input type=checkbox  name=not_checked value="b"> Not Checked </li>
+<li><input type=checkbox  name=indeterminate id=indeterminate value="c"> Indeterminate</li>
+<li><input type=checkbox  name=indeterminateprop id=indeterminateprop value="d"> Indeterminate</li>
+</ul>
+<p><input type="submit" value="Test Me" /></p>
+</form>
+<script>
+var indeterminate = document.getElementById('indeterminate');
+indeterminate.indeterminate = true;
+
+
+var indeterminateprop = document.getElementById('indeterminateprop');
+indeterminateprop.setAttribute('indeterminate', true);
+</script>
+</body>
+</html>

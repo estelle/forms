@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Pattern Examples</title>
+
+<meta name="viewport" content="width=device-width"/>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+  <h1>Pattern Examples</h1>
+<form action="" method="get">
+<p><label for="tel">Pattern Telephone: </label><input id="tel" type="tel" placeholder="XXX-XXX-XXXX" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  /></p>
+<p><label for="tel2">No Pattern Telephone: </label><input id="tel2" type="tel" placeholder="XXX-XXX-XXXX"  name="tel2" /></p>
+<p><label for="tel3">Optional: </label>
+(<input id="tel3" type="tel" placeholder="XXX"  name="tel3" pattern="\d{3}" size=3 />)
+<input id="tel4" type="tel" placeholder="XXX"  name="tel4" pattern="\d{3}" size=3title="3 digits" /> -
+<input id="tel5" type="tel" placeholder="XXXX"  name="tel5" pattern="\d{4}" size=4 title="4 digits" /></p>
+<p><input type="submit" value="Test Me" />
+</form>
+</body>
+</html>
