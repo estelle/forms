@@ -57,10 +57,12 @@ pre {
   font-size: 1.4rem;
   line-height: 1.8rem;
   padding: 0rem 1rem;
+  margin-bottom: 2rem;
   background: linear-gradient(to top, #ecefE4 50%, #FFF 50%);
-  background-size: 100% 3.6rem;
+  background-size: 100% 3.55rem;
   background-position: 0 1.8rem;
   background-clip: padding-box;
+  background-attachment: local;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2); }
 

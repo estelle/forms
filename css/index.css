@@ -24,7 +24,7 @@ body {
 .slides {
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 1120px;
+  width: 100vw;
   height: 100%;
   left: 0;
   top: -70px;
@@ -38,7 +38,7 @@ body {
 header, section {
   padding: 10px 20px;
   box-sizing: border-box;
-  width: 960px; }
+  width: 100vw; }
 
 .slide {
   transform: translate(0, -1400px) scale(0.1) rotate(180deg);
@@ -235,6 +235,41 @@ figure {
     box-sizing: border-box;
     border: none; }
 
+.masking {
+  /* Look and feel (not lib specific) */ }
+  .masking .shell {
+    position: relative;
+    line-height: 1; }
+    .masking .shell span {
+      position: absolute;
+      left: 3px;
+      top: -0.25rem;
+      color: red;
+      pointer-events: none;
+      z-index: -1; }
+      .masking .shell span i {
+        /* any of these 3 will work */
+        color: transparent;
+        opacity: 0;
+        visibility: hidden; }
+  .masking input.masked,
+  .masking .shell span {
+    font-size: 2rem;
+    font-family: monospace;
+    padding-right: 10px;
+    background-color: transparent;
+    text-transform: uppercase; }
+  .masking li {
+    line-height: 2;
+    font-family: helvetica;
+    list-style-type: none;
+    border-bottom: 1px solid #ccc; }
+  .masking label {
+    display: inline-block;
+    width: 14em; }
+  .masking input {
+    border: none; }
+
 pre, style {
   text-align: left;
   font-size: 1.2rem;
@@ -254,10 +289,12 @@ pre {
   font-size: 1.4rem;
   line-height: 1.8rem;
   padding: 0rem 1rem;
+  margin-bottom: 2rem;
   background: linear-gradient(to top, #ecefE4 50%, #FFF 50%);
-  background-size: 100% 3.6rem;
+  background-size: 100% 3.55rem;
   background-position: 0 1.8rem;
   background-clip: padding-box;
+  background-attachment: local;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2); }
 
@@ -346,7 +383,7 @@ pre {
   top: 0;
   right: 0;
   content: "";
-  background-color: #DCe7f3;
+  background-color: #fcfcfc;
   width: 33px;
   border-radius: 0 0 50% 0;
   height: 65px;
@@ -435,15 +472,17 @@ strike {
 li small {
   opacity: 0.5; }
 
-.slide:nth-of-type(n+15) input:focus:invalid {
+.classed input:focus:invalid {
   background-color: lightPink; }
-.slide:nth-of-type(n+15) input:required {
+.classed input:required {
   border: 2px dotted red; }
-.slide:nth-of-type(n+15) input:optional {
+.classed input:optional {
   border: 2px solid green; }
 
-.slide:nth-of-type(n+15):not(:nth-of-type(35)) input:not([type=color]):valid {
-  background-color: lightGreen; }
+input:-webkit-autofill {
+  background-color: purple;
+  background-image: none;
+  color: #000; }
 
 .labeled label {
   width: 15em;
@@ -464,7 +503,7 @@ body {
   color: #333;
   font-size: 1.3rem; }
 
-a, strong
+strong
 dt {
   background-color: #ccc; }
 
