@@ -29,13 +29,16 @@ strike {opacity: 0.3; color: red;}
 .column li, .col li {font-size: 1.4rem;}
 li small {opacity: 0.5;}
 
-.slide:nth-of-type(n+15){
+.classed {
 input:focus:invalid { background-color: lightPink;}
 input:required {border: 2px dotted red;}
 input:optional {border: 2px solid green;}
 }
-.slide:nth-of-type(n+15):not(:nth-of-type(35)){
-input:not([type=color]):valid { background-color: lightGreen }
+
+input:-webkit-autofill {
+  background-color: purple;
+  background-image: none;
+  color: #000; 
 }
 
 .labeled label {
