@@ -3,16 +3,19 @@
 <head>
 <meta charset="UTF-8">
 
-    <title>HTML5 Web Forms</title>
-    <link href="css/index.css" rel="stylesheet">
-  </head><body>
+  <title>HTML5 Web Forms</title>
+  <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
 
-  <div class="presentation">
-      <ul>
-	<li class="button cancel" id="back">Back</li>
+<div class="presentation">
+
+  <ul>
+    <li class="button cancel" id="back">Back</li>
     <li class="button done" id="next">Next</li>
-</ul>
-      <div class="slides">
+  </ul>
+
+<div class="slides">
 
 
 <div class="slide intro">
@@ -285,29 +288,49 @@ and attributes</h2>
 </div>
 
 
-        <div class="slide">
-          <header><h1>Labels</h1></header>
-          <section>
-          <pre contenteditable>&lt;label <b>for=&quot;inputID&quot;</b>&gt;Label: &lt;/label&gt;
+<div class="slide">
+  <header><h1>Labels</h1></header>
+  <section>
+  <pre contenteditable>&lt;label <b>for=&quot;inputID&quot;</b>&gt;Label: &lt;/label&gt;
 &lt;input <b>id=&quot;inputID&quot;</b> name=&quot;inputName&quot; type=&quot;text&quot; /&gt;</pre>
 <p>or</p>
 <pre contenteditable>
 &lt;label&gt;Label: &lt;input name=&quot;nm&quot; type=&quot;text&quot; /&gt;&lt;/label&gt;<br /></pre>
-            <p>The value of the <em>for</em> attribute should match the value of the input's <em>id</em> attribute</p>
-            <hr/>
-            <p>Click on the label to activate the form element:</p>
-            <ul>
-            <li><label for="test1">Radio Button 1</label>
-            <input type="radio" name="radio1" id="test1"/></li>
-            <li><label for="test1v">Radio Button 2</label>
-            <input type="radio" name="radio1" id="test1v"/>
-            </li><li><label for="test2">Checkbox</label>
-            <input type="checkbox" id="test2"/>
-            </li><li><label for="test3">Password</label>
-            <input type="password" id="test3"/></li></ul>
-          </section>
+    <p>The value of the <em>for</em> attribute should match the value of the input's <em>id</em> attribute</p>
+    <hr/>
+    <p>Click on the label to activate the form element:</p>
+    <ul>
+    <li><label for="test1">Radio Button 1</label>
+    <input type="radio" name="radio1" id="test1"/></li>
+    <li><label for="test1v">Radio Button 2</label>
+    <input type="radio" name="radio1" id="test1v"/>
+    </li><li><label for="test2">Checkbox</label>
+    <input type="checkbox" id="test2"/>
+    </li><li><label for="test3">Password</label>
+    <input type="password" id="test3"/></li></ul>
+  </section>
+</div>
 
-        </div>
+<div class="slide">
+  <header><h1>ARIA Accessibilty</h1></header>
+    <section class="content">
+      <ul>
+        <li>aria-labeledby="otherElement idValues"</li>
+        <li>aria-label="Read by Screen Reader</li>
+        <li>&lt;label for="idOfFormControl&gt; (or implicit label)</li>
+        <li>placeholder</li>
+        <li>title</li>
+        <li>not accessible</li>
+      </ul>
+      <pre>&lt;label for="telephone">Telephone Number&lt;/label>
+  &lt;input type="tel" id="telephone" placeholder="(XXX) XXX-XXXX"
+  aria-describedby="10-digit phone number"&gt;
+  &lt;span class="hint" id="hint">10-digit phone number&gt;/span></pre>
+  <label for="telephonex">Telephone Number</label>
+  <input type="tel" id="telephonex" placeholder="(XXX) XXX-XXXX"
+  aria-describedby="hint3"><span class="hint" id="hint3">10-digit phone number</span>
+    </section>
+</div>
 
 
 <div class="slide">
