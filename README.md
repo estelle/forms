@@ -5,4 +5,4 @@ Overview of HTML form controls
 
 Browser support testing via 
 <a href="https://browserstack.com"><img src="images/images_why2/browserstack.png" 
-style="max-height: 1.5em" alt="browserstack"></a>
+style="max-height: 1em" alt="browserstack"></a>
