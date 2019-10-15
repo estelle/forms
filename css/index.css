@@ -537,3 +537,7 @@ pre em {
       box-shadow: 3px 3px 3px rgba(0, 0, 78, 0.3); }
 
 /*# sourceMappingURL=index.css.map */
+details p:before {
+		content: "X";
+		position:absolute; top: 3px; right: 3px; border-radius: 50%;
+		}
