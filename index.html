@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-  <title>HTML5 Web Forms</title>
+  <title>HTML Web Forms</title>
   <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
@@ -20,19 +20,18 @@
 
 <div class="slide intro">
 <header>
-<h1><br>HTML5 Web Forms</h1>
+<h1><br>HTML Web Forms</h1>
 <h2>HTML form elements<br>
 and attributes</h2>
 </header>
 <p><a href="http://estelle.github.io/forms">estelle.github.io/forms</a></p>
-<p><a href="http://twitter.com/estellevw">@estellevw</a></p>
 </div>
 
 
 
 <div class="slide">
     <header>
-      <h1>HTML Form</h1>
+      <h1>Original Form</h1>
     </header>
     <section>
         <form action="#" class="example">
@@ -45,7 +44,7 @@ and attributes</h2>
             <li><label for="xrange">Satisfaction</label><input type="text" id="xrange"/>
 
             </li>
-            <li><label for="xtweet">Twitter</label><input type="text" id="xtweet"/></li>
+            <li><label for="xsocial">Socials</label><input type="text" id="xsocial"/></li>
             <li>
             <input type="submit" value="submit"></li>
         </form>
@@ -78,9 +77,9 @@ and attributes</h2>
             <option value=9>9</option>
             <option value=10>10</option>
           </datalist>
-        <li><label for="ztweet">Twitter</label><input type="text"  class="classed"  pattern="@\w*" placeholder="@twitter" required id="ztweet"/></li>
+        <li><label for="zsocials">Mastodon</label><input type="text"  class="classed"  pattern="\w*\.\w*\/@\w*" placeholder="mastodon.social/@username" required id="zsocials"/></li>
         <li>
-        <input type="submit" value="submit"></li>
+        <button>Submit</button></li>
                         </ul>
     </form>
   </section>
@@ -139,7 +138,7 @@ and attributes</h2>
   <header><h1>&lt;input&gt; types</h1></header>
   <section class="content why">
  <div>
-    <h1> HTML </h1>
+    <h1> Original </h1>
   <ul>
         <li>button</li>
         <li>checkbox</li>
@@ -154,7 +153,7 @@ and attributes</h2>
     </ul>
   </div>
   <div>
-    <h1> HTML<b>5</b> </h1>
+    <h1> Newer </h1>
     <ul>
         <li>email </li>
         <li>url</li>
@@ -176,7 +175,8 @@ and attributes</h2>
 </div>
 
 <div class="slide">
-<header><h1>File input type</h1></header><form enctype="multipart/form-data" method="post">
+<header><h1>File input type</h1></header>
+<form enctype="multipart/form-data" method="post">
 <section class="content">
  <ul>
  <li>Regular file upload <input type="file"></input>
@@ -195,7 +195,6 @@ and attributes</h2>
 	<pre contenteditable>&lt;input type="file" accept="audio/*;capture=microphone"&gt;</pre>
     </li>
 </ul>
-<small>Mobile: Android 3+, Chrome 16+, Safari 6+, Firefox 10+, Blackberry 10+</small>
 </section></form>
 </div>
 
@@ -205,7 +204,7 @@ and attributes</h2>
 
 
 <div class="slide">
-  <header><h1> &lt;input&gt; attributes in HTML 4</h1></header>
+  <header><h1> &lt;input&gt; attributes</h1></header>
   <section class="content">
     <ul class="column">
       <li>name  </li>
@@ -235,7 +234,7 @@ and attributes</h2>
 
 
 <div class="slide">
-  <header><h1> New &lt;input&gt; attributes in HTML5</h1></header>
+  <header><h1> Newer &lt;input&gt; attributes</h1></header>
   <section class="content">
     <ul class="column columns">
           <li class="half">autocomplete    </li>
@@ -288,7 +287,7 @@ and attributes</h2>
   </ul>
   </div>
   <div style="float: left;">
-  <p>New Elements</p>
+  <p>Additional Elements</p>
   <ul>
         <li>&lt;datalist&gt;</li>
         <li>&lt;output&gt;</li>
@@ -305,11 +304,11 @@ and attributes</h2>
 <div class="slide">
   <header><h1>Labels</h1></header>
   <section>
-  <pre contenteditable>&lt;label <b>for=&quot;inputID&quot;</b>&gt;Label: &lt;/label&gt;
+  <pre contenteditable>&lt;label <b>for=&quot;inputID&quot;</b>&gt; Explicit label: &lt;/label&gt;
 &lt;input <b>id=&quot;inputID&quot;</b> name=&quot;inputName&quot; type=&quot;text&quot; /&gt;</pre>
 <p>or</p>
 <pre contenteditable>
-&lt;label&gt;Label: &lt;input name=&quot;nm&quot; type=&quot;text&quot; /&gt;&lt;/label&gt;<br /></pre>
+&lt;label&gt;Implicit label: &lt;input name=&quot;nm&quot; type=&quot;text&quot; /&gt;&lt;/label&gt;<br /></pre>
     <p>The value of the <em>for</em> attribute should match the value of the input's <em>id</em> attribute</p>
     <hr/>
     <p>Click on the label to activate the form element:</p>
@@ -441,16 +440,6 @@ and attributes</h2>
 <input id="xinputID" name="xinputName"
   placeholder="placeholder text"
   type="text"/></form>
-  <footer>
-  <ul class="icons">
-  		<li class="firefox">Firefox 4</li>
-  	   <li class="safari"> Safari 4 </li>
-       <li class="chrome">Chrome 10 </li>
-       <li class="opera">Opera 11</li>
-       <li class="ie">IE10</li>
-       <li class="txt">Android 2.3, iOS5</li>
- </ul>
- </footer>
           </section>
 
         </div>
@@ -477,18 +466,6 @@ and attributes</h2>
   placeholder="#BADA55"
   pattern="#[a-fA-F0-9]{6}"
   type="text"/> (#[a-fA-F0-9]{6})</p>
-              <footer>
-
-                <ul class="icons">
-                   <li class="safari half"> Safari 5</li>
-                   <li class="chrome">Chrome 10</li>
-                   <li class="opera">Opera 11</li>
-                   <li class="firefox">Firefox 4</li>
-                   <li class="ie">IE10</li>
-                   <li class="txt">UI only in mobile/safari</li>
-
-             </ul>
-             </footer>
           </section>
 
         </div>
@@ -518,15 +495,6 @@ and attributes</h2>
   type="text"/></p>
   <pre contenteditable>input[required] {border: 1px dashed #f00;} <strong> or </strong>
 input:required {border: 1px dashed #f00;}</pre>
-
-  <ul class="icons">
-  		<li class="firefox">Firefox 6</li>
-  	   <li class="safari half"> Safari 5</li>
-       <li class="chrome">Chrome 6</li>
-       <li class="opera">Opera 10</li>
-       <li class="ie ">IE 10</li>
-       <li class="txt">UI only in mobile/safari</li>
- </ul>
 
 <p><small>FF: &quot;Please fill out this field&quot;</small></p>
           </section>
@@ -604,9 +572,8 @@ input<strong>:valid</strong> { background-color: lightGreen }
 input<strong>:required</strong> {border: 2px dotted red;}
 input<strong>:optional</strong> {border: 2px solid green;}</pre>
 
-<pre>input<b>:-webkit-autofill</b> {
+<pre>input<b>:autofill</b> {
   background-color: #FAFFBD;
-  background-image: none;
   color: #000;     <input name="name" type="text">
 }</pre>
           </section>
@@ -632,18 +599,7 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
 <p>only one element can have the autofocus attribute</p>
 <pre contenteditable>$('[autofocus]').first().focus();</pre>
   <footer>
-     <ul class="icons">
-  	   <li class="safari">Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox</li>
-       <li class="ie">IE10</li>
-       <li class="txt">Not in mobile webkit</li>
-
- </ul>
  <p><a href="files/autofocus.html" target="play">Test<b> the autofocus attribute</b></a></p>
-
-
   </footer>
           </section>
 
@@ -661,14 +617,7 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
   <strong>form=&quot;notMyParentForm&quot;</strong>
   type=&quot;text&quot; /&gt;</pre>
   <p>Note: <code>form=&quot;&quot;</code> disassociates a form element from its parent form.</p>
-  <ul class="icons">
-  	   <li class="safari"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox</li>
-       <li class="ie">IE</li>
 
- </ul>
  <p><a href="files/form.html" target="play">Test<b> the form attribute</b></a></p>
   <footer>
 
@@ -696,15 +645,6 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
   pattern="\w{6,9}"
   required
   type="text"/></p>
-  <footer>
-
-     <ul class="icons">
-  	   <li class="safari"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox</li>
-       <li class="ie">IE</li>
-       <li class=txt><p>All browsers understand the <em>type</em> attribute, but not all values</p></li></ul></footer>
           </section>
 
         </div>
@@ -734,7 +674,7 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
 <ul>
 <li>button <small>does nothing. use button or js</small></li>
 <li>checkbox <small>unchecked not submitted with form</small></li>
-<li>file <small>disabled in iOS5 and earlier</small></li>
+<li>file </li>
 <li>hidden</li>
 <li>image <small>works like &lt;button&gt;</small></li>
 <li>password <small>use post, not get</small></li>
@@ -742,14 +682,6 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
 <li>reset <small>can lead to bad user experience</small></li>
 <li>submit</li>
 <li>text <small>default</small></li></ul>
-  <footer style="margin-top: -40px;">   <ul class="icons">
-  	   <li class="safari "> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox</li>
-       <li class="ie">IE</li>
-
- </ul><p style="margin-top: -40px;"><strong>All</strong> browsers understand these values.</p></footer>
           </section>
 
         </div>
@@ -774,17 +706,7 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
 <li><del>month </del></li>
 <li><del>week</del>
 </li></ul>
-  <footer>
-     <ul class="icons">
-  	   <li class="safari iffy">Safari 8</li>
-       <li class="chrome">Chrome 20</li>
-       <li class="opera">Opera 11</li>
-  	   <li class="firefox">Firefox 29</li>
-       <li class="ie iffy">IE 10</li>
-
-
-  <li class="txt">Android 4.4. Mixed support in IE10+/Safari 8.</li> </ul>
-</footer>
+  
           </section>
 
         </div>
@@ -821,13 +743,6 @@ input<strong>:optional</strong> {border: 2px solid green;}</pre>
   <option value="http://www.evotech.net" />
 </datalist>
 
-<ul class="icons">
-       <li class="safari no bad"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-       <li class="firefox">Firefox</li>
-       <li class="ie">IE 10</li>
-     </ul>
 
         </section>
 
@@ -867,14 +782,7 @@ required /&gt;</pre>
 </datalist>
 </p>
   <footer>
-   <ul class="icons">
-  	   <li class="safari"> Safari 8</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox 29</li>
-       <li class="ie bad">IE11</li>
-       <li class="txt">Supported in BB10 &amp; A4.4. Not in iOS8 </li>
-     </ul>
+
   <p>Note: defaults to #000000, lowercase.</p>
   </footer>
           </section>
@@ -905,13 +813,6 @@ placeholder="http://www.domain.com"
 pattern="(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.\/]*"/&gt;</pre>
 
 
-       <li class="safari iffy"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-       <li class="firefox">Firefox</li>
-       <li class="ie">IE 10</li>
-       <li class="txt">kinda in iOS and Android</li>
-     </ul>
           </section>
 
         </div>
@@ -958,11 +859,6 @@ class="classed"
 pattern="\d{4}" size=4 />
 
   <footer><ul class="icons">
-  	   <li class="safari"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox</li>
-       <li class="ie">IE10</li>
        <li class="txt">supported on mobile (keyboard)</li>
      </ul>
      </footer>
@@ -989,14 +885,8 @@ placeholder="you@domain.com"
 
 
   <footer>
-     <ul class="icons" style="margin: -5px 0 -10px 0;">
-  	   <li class="safari half"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox</li>
-       <li class="ie">IE 10</li>
-     </ul>
-<small>multiple' emails separated with commas. A4, Saf 5, iOS3.1 don't validate</small>	</footer>
+
+<small>multiple' emails separated with commas.</small>	</footer>
           </section>
 
         </div>
@@ -1023,15 +913,7 @@ max="0" step="any" /&gt;
 
 
           </section>
-<footer>
-<ul class="icons">
-  	   <li class="safari iffy"> Safari 5+</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox">Firefox 29</li>
-       <li class="ie iffy">IE10</li>
-     </ul>
-</footer>
+
 
 
           </div>
@@ -1065,15 +947,6 @@ step="5" onChange="document.querySelector('#rangeit2').innerHTML = document.quer
   <li>list</li>
   <li>orient (FF only)</li>
 </ul>
-        <footer>
-          <ul class="icons">
-  	   <li class="safari "> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-  	   <li class="firefox ">Firefox 23</li>
-       <li class="ie">IE</li>
-     </ul>
-     </footer>
 
         </section>
      </div>
@@ -1136,15 +1009,8 @@ id="search"  <input
   id="search" name="search" type="search" />
 name="search"
 <strong>type="search"</strong>&gt;</pre>
-  <ul class="icons">
-     <li class="safari"> Safari</li>
-     <li class="chrome">Chrome</li>
-     <li class="opera">Opera</li>
-     <li class="firefox">Firefox</li>
-     <li class="ie">IE10</li>
-  </ul>
+
   <p><small>Note: Dynamic keyboards will show "search" instead of "go"</small></p>
-  <p><small>Warning: if you stylize the input, the 'delete' may not show</small></p>
 </section>
 </div>
 
@@ -1162,16 +1028,7 @@ name="search"
     <li><label>time		(19:00)</label><input type="time" id="myTime"/></li>
     <li><label>week		(2015-W23)</label><input type="week" /></li>
     </ul>
-    <footer>
-      <ul class="icons">
-         <li class="safari no">Safari7</li>
-         <li class="chrome">Chrome</li>
-         <li class="opera">Opera</li>
-         <li class="firefox no">Firefox32</li>
-         <li class="ie no">IE11</li>
-      </ul>
-      <p>Works in iOS5+, Android 4.4
-    </footer>
+
   </section>
 </div>
 
@@ -1340,14 +1197,6 @@ name="search"
 
 </div>
 
-<!--
-<div class="slide intro" style="background-image: url(images/sweetbrown.jpg); background-size: auto 100%">
-  <header></header>
-    <section class="content"><h1 style="color: black; text-shadow: 0 0 13px white; font-size: 3rem;  text-align: right">"Ain't nobody <br/>got time <br/>for that." <br/>-- Sweet <br/>Brown</h1><img src="images/sweet.png" alt="Ain't nobody got time for that. -- sweet brown"/>
-    </section>
-</div>
--->
-
 
  <div class="slide classed">
   <header><h1>Custome Error message</h1></header>
@@ -1360,13 +1209,7 @@ pattern="\d{3}\-\d{3}\-\d{4}"
 required /></pre>
 <object data="titlemsg.html" style=" width: 300px; height:200px; float: left"></object>
 <object data="titlemsg2.html" style="width: 300px; height:200px;"></object>
- <ul class="icons">
-   <li class="safari no"> Safari</li>
-   <li class="chrome">Chrome</li>
-   <li class="opera">Opera</li>
-   <li class="firefox">Firefox</li>
-   <li class="ie">IE</li>
- </ul>
+
  <p>validityObject.patternMismatch</p>
 </section>
 </div>
@@ -1387,13 +1230,7 @@ required /></pre>
 <ul>
 <li><meter value=61 min=0 max=100 low=73 high=87 optimum=100 id="meterbar">D-</meter></li>
 </ul>
-<ul class="icons">
-       <li class="safari bad"> Safari</li>
-       <li class="chrome">Chrome</li>
-       <li class="opera">Opera</li>
-       <li class="firefox">Firefox</li>
-       <li class="ie bad">IE</li>
-     </ul>
+
      <p><a href="http://css-tricks.com/html5-meter-element/">&lt;meter> explained</a></p>
     </section>
 </div>
@@ -1455,13 +1292,7 @@ required /></pre>
 <pre contenteditable>&lt;<b>progress</b> value="75" <b>max</b>="100"&gt;75% complete&lt;/<b>progress</b>&gt;</pre>
 <p>Download is: <progress value="75" max="100">75% complete</progress> </p>
 
-<ul class="icons" style="margin-top:0;">
-       <li class="safari"> Safari 5/7</li>
-       <li class="chrome">Chrome 6</li>
-       <li class="opera">Opera 10 </li>
-       <li class="firefox">Firefox 6</li>
-       <li class="ie">IE 10</li>
-     </ul>
+
 </section>
 </div>
 
@@ -1479,7 +1310,6 @@ and attributes</h2>
 <header><h1>Resources</h1></header>
 <section class="content">
 <ul>
-<li><a href="http://twitter.com/estellevw">@estellevw</a></li>
 <li><a href="http://estelle.github.io">estelle.github.io</a></li>
 <li><a href="http://www.wufoo.com/html5/">wufoo.com/html5</a> - more details on everything covered here</li>
 <li><a href="http://quirksmode.org/html5/inputs/mobile.html">quirksmode.org</a> - mobile browsers</li>
